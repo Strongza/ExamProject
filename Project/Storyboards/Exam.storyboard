@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ium-lR-0zK">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Kanit-Regular.ttf">
+            <string>Kanit-Regular</string>
+        </array>
+        <array key="kanit-light.otf">
+            <string>Kanit-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Exam Page View Controller-->
+        <scene sceneID="CDY-RJ-ogU">
+            <objects>
+                <viewController storyboardIdentifier="ExamPage" id="Ium-lR-0zK" customClass="ExamPageViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N1x-To-2gr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="dQ2-J0-sIR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSj-F9-ElX" customClass="DLRadioButton">
+                                <rect key="frame" x="41" y="469" width="290" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="   2. คำตอบ 2">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="25" name="Kanit-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logSelectButtom:" destination="Ium-lR-0zK" eventType="touchUpInside" id="yr9-FN-bJQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="old-xN-PAw" customClass="DLRadioButton">
+                                <rect key="frame" x="41" y="552" width="290" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="   3. คำตอบ 3">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="25" name="Kanit-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logSelectButtom:" destination="Ium-lR-0zK" eventType="touchUpInside" id="W1H-Xu-YMT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FIa-r6-nzJ" customClass="DLRadioButton">
+                                <rect key="frame" x="41" y="636" width="290" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="   4. คำตอบ 4">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="25" name="Kanit-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logSelectButtom:" destination="Ium-lR-0zK" eventType="touchUpInside" id="Qhl-Fn-JVX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W9B-Cb-7de" customClass="DLRadioButton">
+                                <rect key="frame" x="41" y="386" width="290" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="   1. คำตอบ 1 ">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="25" name="Kanit-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logSelectButtom:" destination="Ium-lR-0zK" eventType="touchUpInside" id="Jrd-wl-Dwa"/>
+                                    <outletCollection property="otherButtons" destination="XSj-F9-ElX" id="Hpz-Gb-0Bf"/>
+                                    <outletCollection property="otherButtons" destination="old-xN-PAw" id="mIR-eS-rfe"/>
+                                    <outletCollection property="otherButtons" destination="FIa-r6-nzJ" id="8Ri-Qn-7IM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-u7-pGS">
+                                <rect key="frame" x="267" y="730" width="106" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="18"/>
+                                <state key="normal" title="ต่อไป">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lzB-TU-5lz" kind="push" id="gON-OQ-L3r"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUf-9l-a8h">
+                                <rect key="frame" x="16" y="69" width="343" height="278"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. โจทย์ อิอิอิอิอิอิออิอิอิออิอิอ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Reo-gi-1Nz">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="148"/>
+                                        <fontDescription key="fontDescription" name="Kanit-Light" family="Kanit" pointSize="34"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sky_1" translatesAutoresizingMaskIntoConstraints="NO" id="sPS-Fj-ES8">
+                                        <rect key="frame" x="51" y="142" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Reo-gi-1Nz" firstAttribute="leading" secondItem="ZUf-9l-a8h" secondAttribute="leading" id="1Sb-Nz-AHU"/>
+                                    <constraint firstAttribute="bottom" secondItem="Reo-gi-1Nz" secondAttribute="bottom" constant="130" id="2bW-wt-lcL"/>
+                                    <constraint firstAttribute="trailing" secondItem="Reo-gi-1Nz" secondAttribute="trailing" id="Wph-Sq-0qR"/>
+                                    <constraint firstAttribute="height" constant="278" id="d0H-5D-hiI"/>
+                                    <constraint firstItem="Reo-gi-1Nz" firstAttribute="top" secondItem="ZUf-9l-a8h" secondAttribute="top" id="rga-vO-csT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZUf-9l-a8h" firstAttribute="top" secondItem="pJY-dW-qNf" secondAttribute="top" constant="25" id="Zso-Hn-uw5"/>
+                            <constraint firstItem="pJY-dW-qNf" firstAttribute="trailing" secondItem="ZUf-9l-a8h" secondAttribute="trailing" constant="16" id="l2K-aB-zM6"/>
+                            <constraint firstItem="ZUf-9l-a8h" firstAttribute="leading" secondItem="pJY-dW-qNf" secondAttribute="leading" constant="16" id="u5d-8L-i8s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pJY-dW-qNf"/>
+                    </view>
+                    <connections>
+                        <outlet property="mButton1" destination="W9B-Cb-7de" id="diI-Yj-Og1"/>
+                        <outlet property="mButton2" destination="XSj-F9-ElX" id="BlO-u4-vuo"/>
+                        <outlet property="mButton3" destination="old-xN-PAw" id="PSh-sS-jpK"/>
+                        <outlet property="mButton4" destination="FIa-r6-nzJ" id="rvv-uB-8ZA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jqz-Wr-PUS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="-7.389162561576355"/>
+        </scene>
+        <!--Exam Pic Page View Controller-->
+        <scene sceneID="094-8f-hdC">
+            <objects>
+                <viewController id="lzB-TU-5lz" customClass="ExamPicPageViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KZQ-9P-jWS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ncb-4Q-f49">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ud-QR-Gfh" customClass="DLRadioButton">
+                                <rect key="frame" x="190" y="387" width="158" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="sky_2">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                        <color key="value" red="0.28809171919999998" green="0.1918896735" blue="0.51767873760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                        <color key="value" red="0.28809171919999998" green="0.1918896735" blue="0.51767873760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logSelectButtom:" destination="lzB-TU-5lz" eventType="touchUpInside" id="lya-wY-6cQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VaW-cM-Gh1" customClass="DLRadioButton">
+                                <rect key="frame" x="26" y="553" width="158" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="sky_3">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                        <color key="value" red="0.28809171919999998" green="0.1918896735" blue="0.51767873760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                        <color key="value" red="0.28809171919999998" green="0.1918896735" blue="0.51767873760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logSelectButtom:" destination="lzB-TU-5lz" eventType="touchUpInside" id="llM-1F-DzE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yqc-IH-HhN" customClass="DLRadioButton">
+                                <rect key="frame" x="189" y="553" width="158" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="sky_4">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                        <color key="value" red="0.28809171919999998" green="0.1918896735" blue="0.51767873760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                        <color key="value" red="0.28809171919999998" green="0.1918896735" blue="0.51767873760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logSelectButtom:" destination="lzB-TU-5lz" eventType="touchUpInside" id="oou-SA-wTU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Toa-Ev-8Ll" customClass="DLRadioButton">
+                                <rect key="frame" x="26" y="387" width="158" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="sky_1">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                        <color key="value" red="0.28809171915054321" green="0.19188967347145081" blue="0.51767873764038086" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                        <color key="value" red="0.28809171915054321" green="0.19188967347145081" blue="0.51767873764038086" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logSelectButtom:" destination="lzB-TU-5lz" eventType="touchUpInside" id="Nbf-cl-BiN"/>
+                                    <outletCollection property="otherButtons" destination="8ud-QR-Gfh" id="4jY-sg-Hjn"/>
+                                    <outletCollection property="otherButtons" destination="VaW-cM-Gh1" id="QFL-5E-3pa"/>
+                                    <outletCollection property="otherButtons" destination="yqc-IH-HhN" id="Nyo-XE-vN2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73s-AW-pGH">
+                                <rect key="frame" x="267" y="730" width="106" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="17"/>
+                                <state key="normal" title="ต่อไป">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XSO-An-Clk" kind="presentation" modalTransitionStyle="crossDissolve" id="3oM-oK-0VK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGC-k6-KOu">
+                                <rect key="frame" x="8" y="730" width="111" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="18"/>
+                                <state key="normal" title="ย้อนกลับ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ium-lR-0zK" kind="presentation" modalTransitionStyle="crossDissolve" id="snR-tU-r5l"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIL-UW-Try">
+                                <rect key="frame" x="25" y="60" width="334" height="278"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. โจทย์ บลา บลา บลา คุณสบายดีไหมน่ะ ผมน่ะ สบายดีมาก ๆ เลย" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdQ-Nb-9me">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="278"/>
+                                        <fontDescription key="fontDescription" name="Kanit-Light" family="Kanit" pointSize="34"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="VdQ-Nb-9me" firstAttribute="leading" secondItem="QIL-UW-Try" secondAttribute="leading" id="6wA-6j-FzB"/>
+                                    <constraint firstAttribute="bottom" secondItem="VdQ-Nb-9me" secondAttribute="bottom" id="f3i-ZY-6yq"/>
+                                    <constraint firstAttribute="trailing" secondItem="VdQ-Nb-9me" secondAttribute="trailing" id="jje-sN-qom"/>
+                                    <constraint firstItem="VdQ-Nb-9me" firstAttribute="top" secondItem="QIL-UW-Try" secondAttribute="top" id="w1b-uz-RMF"/>
+                                    <constraint firstAttribute="height" constant="278" id="xrx-6X-Oke"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="T9f-zf-oEv"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QIL-UW-Try" firstAttribute="leading" secondItem="T3Y-WL-Feg" secondAttribute="leading" constant="25" id="8bE-rC-WwX"/>
+                            <constraint firstItem="T3Y-WL-Feg" firstAttribute="trailing" secondItem="QIL-UW-Try" secondAttribute="trailing" constant="16" id="epp-LX-01Z"/>
+                            <constraint firstItem="QIL-UW-Try" firstAttribute="top" secondItem="T3Y-WL-Feg" secondAttribute="top" constant="16" id="z7m-qx-06x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T3Y-WL-Feg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NAo-85-qXk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="beI-g0-PeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1775.2" y="-6.6502463054187197"/>
+        </scene>
+        <!--Exam Mul Page View Controller-->
+        <scene sceneID="ZBE-F9-z9Y">
+            <objects>
+                <viewController id="XSO-An-Clk" customClass="ExamMulPageViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yGQ-ED-bHy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="tet-v2-bMx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IJd-fj-VOY" customClass="DLRadioButton">
+                                <rect key="frame" x="41" y="469" width="290" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="   2. คำตอบ 2">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="25" name="Kanit-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logSelectButtom:" destination="XSO-An-Clk" eventType="touchUpInside" id="TTa-Nm-kog"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="icI-px-ZU0" customClass="DLRadioButton">
+                                <rect key="frame" x="41" y="552" width="290" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="   3. คำตอบ 3">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="25" name="Kanit-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logSelectButtom:" destination="XSO-An-Clk" eventType="touchUpInside" id="P7w-dI-0x3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kkx-AN-GoD" customClass="DLRadioButton">
+                                <rect key="frame" x="41" y="636" width="290" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="   4. คำตอบ 4">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="25" name="Kanit-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logSelectButtom:" destination="XSO-An-Clk" eventType="touchUpInside" id="6Tw-Sx-A45"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J5U-oY-trp" customClass="DLRadioButton">
+                                <rect key="frame" x="41" y="386" width="290" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="   1. คำตอบ 1 ">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="25" name="Kanit-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logSelectButtom:" destination="XSO-An-Clk" eventType="touchUpInside" id="J5U-CZ-BR5"/>
+                                    <outletCollection property="otherButtons" destination="IJd-fj-VOY" id="UTD-ck-h3t"/>
+                                    <outletCollection property="otherButtons" destination="icI-px-ZU0" id="sJ7-ZW-KHf"/>
+                                    <outletCollection property="otherButtons" destination="Kkx-AN-GoD" id="r4m-Mf-elW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvb-wm-5U5">
+                                <rect key="frame" x="267" y="730" width="106" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="18"/>
+                                <state key="normal" title="ส่งคำตอบ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Finish" destination="XSO-An-Clk" eventType="touchUpInside" id="vdp-V4-zxe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAi-le-07y">
+                                <rect key="frame" x="8" y="730" width="111" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="18"/>
+                                <state key="normal" title="ย้อนกลับ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lzB-TU-5lz" kind="presentation" modalTransitionStyle="crossDissolve" id="uVh-Tv-h9H"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ay3-Kr-iWY">
+                                <rect key="frame" x="25" y="60" width="334" height="278"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20. โจทย์ บลา บลา บลา คุณสบายดีไหมน่ะ      *มีคำตอบมากกว่า 1 ข้อ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHD-cd-DKD">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="278"/>
+                                        <fontDescription key="fontDescription" name="Kanit-Light" family="Kanit" pointSize="34"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="VHD-cd-DKD" secondAttribute="trailing" id="DdV-CY-xFq"/>
+                                    <constraint firstAttribute="bottom" secondItem="VHD-cd-DKD" secondAttribute="bottom" id="Rqo-oQ-4GX"/>
+                                    <constraint firstItem="VHD-cd-DKD" firstAttribute="top" secondItem="ay3-Kr-iWY" secondAttribute="top" id="VIz-i4-zrI"/>
+                                    <constraint firstItem="VHD-cd-DKD" firstAttribute="leading" secondItem="ay3-Kr-iWY" secondAttribute="leading" id="ZUW-83-MQk"/>
+                                    <constraint firstAttribute="height" constant="278" id="p0U-cf-AU3"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="I3W-04-SNG"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zGS-Vu-mOc" firstAttribute="trailing" secondItem="ay3-Kr-iWY" secondAttribute="trailing" constant="16" id="1KW-F1-RLf"/>
+                            <constraint firstItem="ay3-Kr-iWY" firstAttribute="leading" secondItem="zGS-Vu-mOc" secondAttribute="leading" constant="25" id="9eF-4E-vm5"/>
+                            <constraint firstItem="ay3-Kr-iWY" firstAttribute="top" secondItem="zGS-Vu-mOc" secondAttribute="top" constant="16" id="nAi-oa-i6o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zGS-Vu-mOc"/>
+                    </view>
+                    <connections>
+                        <outlet property="mButton2" destination="IJd-fj-VOY" id="jue-hl-KWB"/>
+                        <outlet property="mButton3" destination="icI-px-ZU0" id="2rv-2C-M1l"/>
+                        <outlet property="mButton4" destination="Kkx-AN-GoD" id="coN-jY-w1w"/>
+                        <outlet property="radioButtom" destination="J5U-oY-trp" id="EZW-iB-dKs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="du3-FK-Cc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.6" y="657.63546798029563"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1125" height="2436"/>
+        <image name="sky_1" width="275" height="183"/>
+        <image name="sky_2" width="275" height="183"/>
+        <image name="sky_3" width="284" height="177"/>
+        <image name="sky_4" width="275" height="183"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gON-OQ-L3r"/>
+    </inferredMetricsTieBreakers>
+</document>

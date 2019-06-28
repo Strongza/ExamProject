@@ -1,0 +1,35 @@
+PODS:
+  - Alamofire (5.0.0-beta.6)
+  - AlamofireImage (4.0.0-beta.3):
+    - Alamofire (~> 5.0.0-beta.6)
+  - DLRadioButton (1.4.12)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - YoutubePlayer-in-WKWebView (0.3.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.5)
+  - AlamofireImage (~> 4.0.0-beta.3)
+  - DLRadioButton (~> 1.4)
+  - FMDB (~> 2.7.5)
+  - YoutubePlayer-in-WKWebView (~> 0.3.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - DLRadioButton
+    - FMDB
+    - YoutubePlayer-in-WKWebView
+
+SPEC CHECKSUMS:
+  Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
+  AlamofireImage: 980b4eccaed1fa559d78bc479d067ff89d23bc95
+  DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  YoutubePlayer-in-WKWebView: 17a33b2fa619d357c9ddd763942ce556660facae
+
+PODFILE CHECKSUM: 7d0f89c2b9d2bd20239e02b5611de00e184fb724
+
+COCOAPODS: 1.7.2
