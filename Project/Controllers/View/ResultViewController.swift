@@ -6,6 +6,10 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -15,6 +19,12 @@ class ResultViewController: UIViewController {
     @IBAction func listPage() {
         
         let storyboard = AppStoryboard.ExamList.instance.instantiateViewController(withIdentifier: "Exam_storyboard")
-        self.present(storyboard, animated: true, completion: nil)
+        navigationController?.pushViewController(storyboard, animated: true)
     }
+    
+    @IBAction func goToMain(){
+        self.dismiss(animated: true, completion: nil)
+       
+    }
+    
 }

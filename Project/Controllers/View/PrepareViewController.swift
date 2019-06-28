@@ -9,14 +9,20 @@ class PrepareViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
     @IBAction func returnToList(){
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
         
     }
     
     @IBAction func startExam(){
         let storyboard = AppStoryboard.Exam.instance.instantiateViewController(withIdentifier: "ExamPage")
-        self.present(storyboard, animated: true, completion: nil)
+        navigationController?.pushViewController(storyboard, animated: true)
     }
     
 

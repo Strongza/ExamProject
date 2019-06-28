@@ -12,8 +12,10 @@ class ExamPicPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    @IBAction func close(){
-        self.dismiss(animated: true, completion: nil)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     @objc @IBAction func logSelectButtom(_ radioButtom: DLRadioButton){
@@ -24,5 +26,16 @@ class ExamPicPageViewController: UIViewController {
         }
     }
 
-
+    @IBAction func previousButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+//        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        
+        let storyboard = AppStoryboard.Exam.instance.instantiateViewController(withIdentifier: "ExamMulPageViewController")
+        storyboard.modalTransitionStyle = .crossDissolve
+        navigationController?.pushViewController(storyboard, animated: true)
+    }
+    
 }

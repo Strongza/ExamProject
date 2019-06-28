@@ -14,6 +14,11 @@ class ExamMulPageViewController: UIViewController {
         setButtonStyle()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
     @IBAction func close(){
         self.dismiss(animated: true, completion: nil)
     }
@@ -30,8 +35,10 @@ class ExamMulPageViewController: UIViewController {
     }
     
     @IBAction func Finish(){
+        
         let storyboard = AppStoryboard.Result.instance.instantiateViewController(withIdentifier: "Result")
-        self.present(storyboard, animated: true, completion: nil)
+        navigationController?.pushViewController(storyboard, animated: true)
+        
     }
     
     
@@ -41,6 +48,11 @@ class ExamMulPageViewController: UIViewController {
         mButton2.drawAsCircle(radius: 36)
         mButton3.drawAsCircle(radius: 36)
         mButton4.drawAsCircle(radius: 36)
+    }
+    
+    @IBAction func previousButtonTapped(_ sender: Any) {
+//        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
