@@ -9,6 +9,12 @@ class PrepareViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
     @IBAction func returnToList(){
         self.dismiss(animated: true, completion: nil)
         

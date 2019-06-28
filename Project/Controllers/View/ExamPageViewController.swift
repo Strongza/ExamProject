@@ -14,6 +14,11 @@ class ExamPageViewController: UIViewController {
         self.setButtonStyle()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
     @IBAction func close(){
         self.dismiss(animated: true, completion: nil)
     }

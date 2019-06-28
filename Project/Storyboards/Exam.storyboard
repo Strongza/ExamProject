@@ -157,7 +157,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lzB-TU-5lz" kind="push" id="gON-OQ-L3r"/>
+                                    <segue destination="lzB-TU-5lz" kind="presentation" modalTransitionStyle="crossDissolve" id="gON-OQ-L3r"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUf-9l-a8h">
