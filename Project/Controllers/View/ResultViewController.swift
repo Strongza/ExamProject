@@ -19,6 +19,12 @@ class ResultViewController: UIViewController {
     @IBAction func listPage() {
         
         let storyboard = AppStoryboard.ExamList.instance.instantiateViewController(withIdentifier: "Exam_storyboard")
-        self.present(storyboard, animated: true, completion: nil)
+        navigationController?.pushViewController(storyboard, animated: true)
     }
+    
+    @IBAction func goToMain(){
+        self.dismiss(animated: true, completion: nil)
+       
+    }
+    
 }

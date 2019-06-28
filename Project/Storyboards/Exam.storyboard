@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ium-lR-0zK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pvC-Vi-cZd">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Exam Page View Controller-->
+        <!--HELLO-->
         <scene sceneID="CDY-RJ-ogU">
             <objects>
                 <viewController storyboardIdentifier="ExamPage" id="Ium-lR-0zK" customClass="ExamPageViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -157,7 +157,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lzB-TU-5lz" kind="presentation" modalTransitionStyle="crossDissolve" id="gON-OQ-L3r"/>
+                                    <action selector="nextButtonTapped:" destination="Ium-lR-0zK" eventType="touchUpInside" id="WsG-c9-svd"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUf-9l-a8h">
@@ -191,6 +191,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pJY-dW-qNf"/>
                     </view>
+                    <navigationItem key="navigationItem" title="HELLO" id="RZk-1b-63T"/>
                     <connections>
                         <outlet property="mButton1" destination="W9B-Cb-7de" id="diI-Yj-Og1"/>
                         <outlet property="mButton2" destination="XSj-F9-ElX" id="BlO-u4-vuo"/>
@@ -200,12 +201,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqz-Wr-PUS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="-7.389162561576355"/>
+            <point key="canvasLocation" x="2735.1999999999998" y="-7.389162561576355"/>
         </scene>
         <!--Exam Pic Page View Controller-->
         <scene sceneID="094-8f-hdC">
             <objects>
-                <viewController id="lzB-TU-5lz" customClass="ExamPicPageViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExamPicPageViewController" id="lzB-TU-5lz" customClass="ExamPicPageViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KZQ-9P-jWS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -308,12 +309,12 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73s-AW-pGH">
                                 <rect key="frame" x="267" y="730" width="106" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="18"/>
                                 <state key="normal" title="ต่อไป">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XSO-An-Clk" kind="presentation" modalTransitionStyle="crossDissolve" id="3oM-oK-0VK"/>
+                                    <action selector="nextButtonTapped:" destination="lzB-TU-5lz" eventType="touchUpInside" id="Svt-pB-cW8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGC-k6-KOu">
@@ -324,7 +325,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ium-lR-0zK" kind="presentation" modalTransitionStyle="crossDissolve" id="snR-tU-r5l"/>
+                                    <action selector="previousButtonTapped:" destination="lzB-TU-5lz" eventType="touchUpInside" id="Gpc-d1-XhL"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIL-UW-Try">
@@ -359,12 +360,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="beI-g0-PeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1775.2" y="-6.6502463054187197"/>
+            <point key="canvasLocation" x="3631" y="-7"/>
         </scene>
         <!--Exam Mul Page View Controller-->
         <scene sceneID="ZBE-F9-z9Y">
             <objects>
-                <viewController id="XSO-An-Clk" customClass="ExamMulPageViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="du3-FK-Cc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="ExamMulPageViewController" id="XSO-An-Clk" customClass="ExamMulPageViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yGQ-ED-bHy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -511,7 +513,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lzB-TU-5lz" kind="presentation" modalTransitionStyle="crossDissolve" id="uVh-Tv-h9H"/>
+                                    <action selector="previousButtonTapped:" destination="XSO-An-Clk" eventType="touchUpInside" id="200-M3-xZC"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ay3-Kr-iWY">
@@ -542,6 +544,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zGS-Vu-mOc"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dP4-V9-qq9"/>
                     <connections>
                         <outlet property="mButton2" destination="IJd-fj-VOY" id="jue-hl-KWB"/>
                         <outlet property="mButton3" destination="icI-px-ZU0" id="2rv-2C-M1l"/>
@@ -549,9 +552,25 @@
                         <outlet property="radioButtom" destination="J5U-oY-trp" id="EZW-iB-dKs"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="du3-FK-Cc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1021.6" y="657.63546798029563"/>
+            <point key="canvasLocation" x="4492" y="-7"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tGc-VF-bZ6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="pvC-Vi-cZd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QP7-25-8MF">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ium-lR-0zK" kind="relationship" relationship="rootViewController" id="Pen-fs-iWe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9bf-AZ-YVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1792.8" y="-7.389162561576355"/>
         </scene>
     </scenes>
     <resources>
@@ -561,7 +580,4 @@
         <image name="sky_3" width="284" height="177"/>
         <image name="sky_4" width="275" height="183"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="gON-OQ-L3r"/>
-    </inferredMetricsTieBreakers>
 </document>

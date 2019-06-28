@@ -18,10 +18,6 @@ class ExamPicPageViewController: UIViewController {
         UIApplication.shared.statusBarStyle = .lightContent
     }
     
-    @IBAction func close(){
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     @objc @IBAction func logSelectButtom(_ radioButtom: DLRadioButton){
         if radioButtom.isMultipleSelectionEnabled {
             for buttom in radioButtom.selectedButtons(){
@@ -30,5 +26,16 @@ class ExamPicPageViewController: UIViewController {
         }
     }
 
-
+    @IBAction func previousButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+//        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        
+        let storyboard = AppStoryboard.Exam.instance.instantiateViewController(withIdentifier: "ExamMulPageViewController")
+        storyboard.modalTransitionStyle = .crossDissolve
+        navigationController?.pushViewController(storyboard, animated: true)
+    }
+    
 }

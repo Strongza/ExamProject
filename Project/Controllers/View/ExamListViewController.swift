@@ -64,8 +64,7 @@ extension ExamListViewController: UITableViewDelegate, UITableViewDataSource {
         print(ID)
         
         let storyboard = AppStoryboard.Preparetoexam.instance.instantiateViewController(withIdentifier: "PrepareExam")
-            storyboard.modalTransitionStyle = .crossDissolve
-        self.present(storyboard, animated: true, completion: nil)
+         navigationController?.pushViewController(storyboard, animated: true)
         
     }
     

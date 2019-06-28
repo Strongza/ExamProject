@@ -14,11 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    @IBAction func listPage() {
-        
-        let storyboard = AppStoryboard.ExamList.instance.instantiateViewController(withIdentifier: "Exam_storyboard")
-        self.present(storyboard, animated: true, completion: nil)
-    }
+
 
 
 }

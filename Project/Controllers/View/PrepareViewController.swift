@@ -16,13 +16,13 @@ class PrepareViewController: UIViewController {
     }
     
     @IBAction func returnToList(){
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
         
     }
     
     @IBAction func startExam(){
         let storyboard = AppStoryboard.Exam.instance.instantiateViewController(withIdentifier: "ExamPage")
-        self.present(storyboard, animated: true, completion: nil)
+        navigationController?.pushViewController(storyboard, animated: true)
     }
     
 
