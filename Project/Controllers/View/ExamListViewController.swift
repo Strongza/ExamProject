@@ -64,7 +64,7 @@ extension ExamListViewController: UITableViewDelegate, UITableViewDataSource {
         print(ID)
         
         let storyboard = AppStoryboard.Preparetoexam.instance.instantiateViewController(withIdentifier: "PrepareExam")
-         navigationController?.pushViewController(storyboard, animated: true)
+        navigationController?.pushViewController(storyboard, animated: true)
         
     }
     

@@ -39,7 +39,7 @@
                                         <fragment content="   2. คำตอบ 2">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="25" name="Kanit-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="25"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -68,7 +68,7 @@
                                         <fragment content="   3. คำตอบ 3">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="25" name="Kanit-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="25"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -97,7 +97,7 @@
                                         <fragment content="   4. คำตอบ 4">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="25" name="Kanit-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="25"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -126,7 +126,7 @@
                                         <fragment content="   1. คำตอบ 1 ">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="25" name="Kanit-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="25"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -383,7 +383,7 @@
                                         <fragment content="   2. คำตอบ 2">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="25" name="Kanit-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="25"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -412,7 +412,7 @@
                                         <fragment content="   3. คำตอบ 3">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="25" name="Kanit-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="25"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -441,7 +441,7 @@
                                         <fragment content="   4. คำตอบ 4">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="25" name="Kanit-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="25"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -470,7 +470,7 @@
                                         <fragment content="   1. คำตอบ 1 ">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="25" name="Kanit-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="25"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
