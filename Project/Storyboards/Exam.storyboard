@@ -365,7 +365,6 @@
         <!--Exam Mul Page View Controller-->
         <scene sceneID="ZBE-F9-z9Y">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="du3-FK-Cc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ExamMulPageViewController" id="XSO-An-Clk" customClass="ExamMulPageViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yGQ-ED-bHy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -552,6 +551,7 @@
                         <outlet property="radioButtom" destination="J5U-oY-trp" id="EZW-iB-dKs"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="du3-FK-Cc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4492" y="-7"/>
         </scene>
