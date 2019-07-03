@@ -3,11 +3,10 @@ import Alamofire
 
 class ExamListViewController: UIViewController {
 
-    let TitleArr = ["คณิตศาสตร์" , "วิทยาศาสตร์", "ชีววิทยา","คอมพิวเตอร์", "เคมี","ภาษาไทย","ภาษาอังกฤษ","NodeJS","JSON","Robot Framework","Git","Xcode","CocoaPod","Java","Spring Boot"]
+
     
     var mDataArray: [Datum] = []
-    var Exam_name = [String]()
-    var searchedTitle = [String]()
+    var searchedTitle = [Datum]()
     var searching = false
     var ID: String = ""
     
@@ -44,7 +43,7 @@ class ExamListViewController: UIViewController {
             case .success:
                 
                 do{
-                    print(response)
+//                    print(response)
                     let result = try JSONDecoder().decode(ExamlistResponse.self, from: response.data!)
                     self.mDataArray = result.data
 //                    var i:Int = 0
@@ -52,10 +51,7 @@ class ExamListViewController: UIViewController {
 //                        self.Exam_name[ i ] = name.examName
 //                        i = i + 1
 //                    }
-                    for i in 0..<self.mDataArray.count{
-                        self.Exam_name.append(self.mDataArray[ i ].examName)
-                    }
-                    print(self.Exam_name)
+        
                   self.mTableView.reloadData()
                     
                 }catch{
@@ -87,9 +83,13 @@ extension ExamListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ExamListTableViewCell
         let item = mDataArray[indexPath.row]
-        print(item)
+        
+      
+        
+//        print(item)
         if searching {
-            cell.mTextLabel.text = searchedTitle[indexPath.row]
+            let sItem = searchedTitle[indexPath.row]
+            cell.mTextLabel.text = sItem.examName
         } else {
             cell.mTextLabel.text = item.examName
         }
@@ -98,13 +98,16 @@ extension ExamListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = mDataArray[indexPath.row]
+        
+        
         if searching {
-             self.ID = self.searchedTitle[indexPath.row]
+            let sItem = searchedTitle[indexPath.row]
+             self.ID = sItem.examID
         } else {
              self.ID = item.examID
         }
-
-        print(ID)
+        
+        print(self.ID)
         
         let storyboard = AppStoryboard.Preparetoexam.instance.instantiateViewController(withIdentifier: "PrepareExam")
         navigationController?.pushViewController(storyboard, animated: true)
@@ -118,8 +121,13 @@ extension ExamListViewController: UITableViewDelegate, UITableViewDataSource {
 extension ExamListViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchedTitle = Exam_name.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
-        searching = true
+        searchedTitle = mDataArray.filter{ $0.examName.lowercased().contains(searchText.lowercased()) }
+        if searchBar.text == ""{
+            searching = false
+        }else{
+            searching = true
+        }
+    
         mTableView.reloadData()
     }
     
