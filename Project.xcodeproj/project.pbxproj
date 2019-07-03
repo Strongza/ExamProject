@@ -28,6 +28,7 @@
 		B04E2F3F22C4CF38002AE077 /* Kanit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B04E2F3E22C4CF38002AE077 /* Kanit-Regular.ttf */; };
 		B04E2F4422C511D0002AE077 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04E2F4322C511D0002AE077 /* Result.storyboard */; };
 		B04E2F4622C52269002AE077 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04E2F4522C52269002AE077 /* ResultViewController.swift */; };
+		B0D5A01C22CC356F0006EA90 /* ExamlistResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5A01B22CC356F0006EA90 /* ExamlistResponse.swift */; };
 		CE8797057EF34804EC748F34 /* Pods_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33858279949F611912B76901 /* Pods_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		B04E2F3E22C4CF38002AE077 /* Kanit-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Regular.ttf"; sourceTree = "<group>"; };
 		B04E2F4322C511D0002AE077 /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		B04E2F4522C52269002AE077 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		B0D5A01B22CC356F0006EA90 /* ExamlistResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamlistResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		B035982122C48B6F00DD9D55 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				B0D5A01A22CC35360006EA90 /* Models */,
 				4014594F22C5AFC800B0CDD1 /* Extension */,
 				5379922522C4D5340074E48F /* Storyboards */,
 				5379922422C4D52A0074E48F /* Controllers */,
@@ -183,6 +186,14 @@
 				B04E2F3E22C4CF38002AE077 /* Kanit-Regular.ttf */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		B0D5A01A22CC35360006EA90 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0D5A01B22CC356F0006EA90 /* ExamlistResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +329,7 @@
 				B035983B22C4918600DD9D55 /* CMExtension.swift in Sources */,
 				405365E122C4E2E900A6DDA3 /* ExamMulPageViewController.swift in Sources */,
 				B04E2F4622C52269002AE077 /* ResultViewController.swift in Sources */,
+				B0D5A01C22CC356F0006EA90 /* ExamlistResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
