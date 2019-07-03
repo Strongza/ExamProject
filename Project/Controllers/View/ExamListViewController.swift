@@ -8,7 +8,7 @@ class ExamListViewController: UIViewController {
     var mDataArray: [Datum] = []
     var searchedTitle = [Datum]()
     var searching = false
-    var ID: String = ""
+    var ID: Int = 0
     
     
     @IBOutlet weak var mSearchBar: UISearchBar!
@@ -37,14 +37,16 @@ class ExamListViewController: UIViewController {
     }
     
     @objc func feedData(){
-        AF.request("http://localhost:9000/api/exam/list_exam", method: .get).responseJSON { (response) in
+        AF.request("http://192.168.109.207:9999/exam/list_exam", method: .get).responseJSON { (response) in
             
             switch response.result{
             case .success:
                 
                 do{
+                    
 //                    print(response)
                     let result = try JSONDecoder().decode(ExamlistResponse.self, from: response.data!)
+                    print(result)
                     self.mDataArray = result.data
 //                    var i:Int = 0
 //                    for name in self.mDataArray {

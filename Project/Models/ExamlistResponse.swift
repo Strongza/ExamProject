@@ -13,13 +13,14 @@ struct ExamlistResponse: Codable {
 
 // MARK: - Datum
 struct Datum: Codable {
-    let examID, examName: String
-    let pointExam, countQuestion: Int
+    let examID: Int
+    let examName: String
+    let examTotalScore, countQuestion: Int
     
     enum CodingKeys: String, CodingKey {
         case examID = "exam_id"
         case examName = "exam_name"
-        case pointExam = "point_exam"
+        case examTotalScore = "exam_total_score"
         case countQuestion = "count_question"
     }
 }
