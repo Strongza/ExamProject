@@ -9,6 +9,9 @@ class ExamListViewController: UIViewController {
     var searchedTitle = [Datum]()
     var searching = false
     var ID: Int = 0
+    var examName: String = ""
+    var totalScore: Int = 0
+    var examCount: Int = 0
     
     
     @IBOutlet weak var mSearchBar: UISearchBar!
@@ -37,9 +40,10 @@ class ExamListViewController: UIViewController {
     }
     
     @objc func feedData(){
-        
-        AF.request("http://192.168.109.207:9999/exam/list_exam", method: .get).responseJSON { (response) in
-            
+
+        //AF.request("http://192.168.109.207:9999/exam/list_exam", method: .get).responseJSON { (response) in
+            AF.request("http://localhost:9000/api/exam/list_exam", method: .get).responseJSON { (response) in
+
             switch response.result{
             case .success:
                 
@@ -106,14 +110,32 @@ extension ExamListViewController: UITableViewDelegate, UITableViewDataSource {
         if searching {
             let sItem = searchedTitle[indexPath.row]
              self.ID = sItem.examID
+             self.examName = sItem.examName
+             self.totalScore = sItem.examTotalScore
+             self.examCount = sItem.countQuestion
         } else {
              self.ID = item.examID
+            self.examName = item.examName
+            self.totalScore = item.examTotalScore
+            self.examCount = item.countQuestion
         }
         
         print(self.ID)
+        let storyboard = UIStoryboard(name: "Preparetoexam", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PrepareExam") as! PrepareViewController
+        vc.id = self.ID
+        vc.examName = self.examName
+        vc.totalScore = self.totalScore
+        vc.examCount = self.examCount
         
-        let storyboard = AppStoryboard.Preparetoexam.instance.instantiateViewController(withIdentifier: "PrepareExam")
-        navigationController?.pushViewController(storyboard, animated: true)
+        
+        
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+//        let storyboard = AppStoryboard.Preparetoexam.instance.instantiateViewController(withIdentifier: "PrepareExam")
+//        storyboard.id = self.ID
+//        navigationController?.pushViewController(storyboard, animated: true)
         
     }
     
