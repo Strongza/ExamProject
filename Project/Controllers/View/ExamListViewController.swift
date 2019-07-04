@@ -22,6 +22,7 @@ class ExamListViewController: UIViewController {
         super.viewDidLoad()
         self.feedData()
         mBanner.dropShadow()
+        
     }
     
     

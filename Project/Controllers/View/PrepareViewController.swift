@@ -13,7 +13,8 @@ class PrepareViewController: UIViewController {
         super.viewDidLoad()
         self.nameLabel.text = "\(examName)"
         self.deskLabel.text = "ข้อสอบชุดนี้ประกอบด้วย\n -ข้อสอบจำนวน \(totalScore) ข้อ\n -คะแนนรวมทั้งหมด \(examCount) คะแนน"
-
+    
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
