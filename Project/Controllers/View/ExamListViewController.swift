@@ -37,6 +37,7 @@ class ExamListViewController: UIViewController {
     }
     
     @objc func feedData(){
+        
         AF.request("http://192.168.109.207:9999/exam/list_exam", method: .get).responseJSON { (response) in
             
             switch response.result{
