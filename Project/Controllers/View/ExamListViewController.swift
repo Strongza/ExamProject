@@ -68,6 +68,17 @@ class ExamListViewController: UIViewController {
                 
             case .failure(let error):
                 print("network error: \(error.localizedDescription)")
+                
+                
+                let alertVC = UIAlertController(title: "Network Error", message: "\(error.localizedDescription)", preferredStyle: .alert)
+                alertVC.addAction(UIAlertAction(title: "cancel", style: .cancel, handler:  { (alert) in
+                    self.dismiss(animated: true, completion: nil)
+                }))
+                
+                
+                
+               
+                self.present(alertVC, animated: true, completion: nil)
             }
             
             // 2 second

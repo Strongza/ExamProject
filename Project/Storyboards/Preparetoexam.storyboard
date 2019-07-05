@@ -55,8 +55,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hU0-Ka-5L9">
                                         <rect key="frame" x="35" y="132.66666666666669" width="305" height="171.33333333333331"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lHP-Fa-abF">
-                                                <rect key="frame" x="25" y="23" width="255" height="121.33333333333331"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lHP-Fa-abF">
+                                                <rect key="frame" x="25" y="24.999999999999993" width="255" height="121.33333333333331"/>
                                                 <string key="text">ข้อสอบชุดนี้ประกอบด้วย
 - ข้อสอบจำนวน 20 ข้อ
 - คะแนนรวมทั้งหมด 20 คะแนน</string>
