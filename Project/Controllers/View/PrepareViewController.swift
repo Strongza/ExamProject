@@ -27,10 +27,10 @@ class PrepareViewController: UIViewController {
         
     }
     
-    @IBAction func startExam(){
-        let storyboard = AppStoryboard.Exam.instance.instantiateViewController(withIdentifier: "ExamPage")
-        navigationController?.pushViewController(storyboard, animated: true)
-    }
+//    @IBAction func startExam(){
+//        let storyboard = AppStoryboard.Exam.instance.instantiateViewController(withIdentifier: "ExamPage")
+//        navigationController?.pushViewController(storyboard, animated: true)
+//    }
     
 
 }

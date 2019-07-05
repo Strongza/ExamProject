@@ -29,6 +29,8 @@
 		B04E2F4422C511D0002AE077 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04E2F4322C511D0002AE077 /* Result.storyboard */; };
 		B04E2F4622C52269002AE077 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04E2F4522C52269002AE077 /* ResultViewController.swift */; };
 		B0D5A01C22CC356F0006EA90 /* ExamlistResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5A01B22CC356F0006EA90 /* ExamlistResponse.swift */; };
+		B0FD65C622CEE03A0002C4B3 /* ExamTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FD65C522CEE03A0002C4B3 /* ExamTest.storyboard */; };
+		B0FD65C822CEE2B70002C4B3 /* ExamTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD65C722CEE2B70002C4B3 /* ExamTestViewController.swift */; };
 		CE8797057EF34804EC748F34 /* Pods_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33858279949F611912B76901 /* Pods_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		B04E2F4322C511D0002AE077 /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		B04E2F4522C52269002AE077 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		B0D5A01B22CC356F0006EA90 /* ExamlistResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamlistResponse.swift; sourceTree = "<group>"; };
+		B0FD65C522CEE03A0002C4B3 /* ExamTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExamTest.storyboard; sourceTree = "<group>"; };
+		B0FD65C722CEE2B70002C4B3 /* ExamTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamTestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 				405365E022C4E2E800A6DDA3 /* ExamPicPageViewController.swift */,
 				405365DE22C4E2E800A6DDA3 /* ExamMulPageViewController.swift */,
 				B04E2F4522C52269002AE077 /* ResultViewController.swift */,
+				B0FD65C722CEE2B70002C4B3 /* ExamTestViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				5379922622C4D60A0074E48F /* Preparetoexam.storyboard */,
 				405365DC22C4E2C900A6DDA3 /* Exam.storyboard */,
 				B04E2F4322C511D0002AE077 /* Result.storyboard */,
+				B0FD65C522CEE03A0002C4B3 /* ExamTest.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 				B04E2F3F22C4CF38002AE077 /* Kanit-Regular.ttf in Resources */,
 				B035982D22C48B7000DD9D55 /* LaunchScreen.storyboard in Resources */,
 				B035983522C48D1200DD9D55 /* ExamList.storyboard in Resources */,
+				B0FD65C622CEE03A0002C4B3 /* ExamTest.storyboard in Resources */,
 				B035982A22C48B7000DD9D55 /* Assets.xcassets in Resources */,
 				405365DB22C4E2B500A6DDA3 /* kanit-light.otf in Resources */,
 				B035982822C48B6F00DD9D55 /* Main.storyboard in Resources */,
@@ -318,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4014595122C5AFF200B0CDD1 /* CustomExtension.swift in Sources */,
+				B0FD65C822CEE2B70002C4B3 /* ExamTestViewController.swift in Sources */,
 				5379922922C4D6F90074E48F /* PrepareViewController.swift in Sources */,
 				B035983922C48E2F00DD9D55 /* AppStoryboard.swift in Sources */,
 				B035982522C48B6F00DD9D55 /* ViewController.swift in Sources */,
