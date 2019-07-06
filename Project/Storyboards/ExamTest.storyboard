@@ -62,7 +62,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="thb-dj-yka"/>
                     <connections>
-                        <outlet property="mLabel" destination="7ap-23-UVf" id="Ohz-Kw-9BD"/>
+                        <outlet property="mLabel" destination="7ap-23-UVf" id="rIh-zz-xZQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Nf-Zw-pJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
