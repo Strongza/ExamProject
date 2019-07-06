@@ -30,14 +30,24 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPm-CU-5wL">
+                                                <rect key="frame" x="358" y="128" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="addQuestion" destination="R5c-69-8eM" eventType="touchUpInside" id="nR1-Lk-cv4"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="NPm-CU-5wL" secondAttribute="bottom" constant="12.5" id="Qx5-zI-hIw"/>
                                             <constraint firstItem="7ap-23-UVf" firstAttribute="top" secondItem="pHo-FX-fXv" secondAttribute="top" constant="100" id="a47-1R-xWM"/>
                                             <constraint firstAttribute="bottom" secondItem="7ap-23-UVf" secondAttribute="bottom" constant="50" id="eui-v0-tHF"/>
                                             <constraint firstItem="7ap-23-UVf" firstAttribute="leading" secondItem="pHo-FX-fXv" secondAttribute="leading" constant="10" id="hXw-zN-PkI"/>
                                             <constraint firstItem="7ap-23-UVf" firstAttribute="centerX" secondItem="pHo-FX-fXv" secondAttribute="centerX" id="knU-ia-WuW"/>
+                                            <constraint firstAttribute="trailing" secondItem="NPm-CU-5wL" secondAttribute="trailing" constant="10" id="n0s-or-q8s"/>
                                             <constraint firstAttribute="trailing" secondItem="7ap-23-UVf" secondAttribute="trailing" constant="10" id="oQi-V7-v7C"/>
+                                            <constraint firstItem="NPm-CU-5wL" firstAttribute="top" secondItem="7ap-23-UVf" secondAttribute="bottom" constant="7.5" id="pMr-76-bJd"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -45,8 +55,10 @@
                                     <constraint firstItem="pHo-FX-fXv" firstAttribute="top" secondItem="s9O-Y5-AeF" secondAttribute="top" id="83J-ae-WwX"/>
                                     <constraint firstItem="pHo-FX-fXv" firstAttribute="height" secondItem="s9O-Y5-AeF" secondAttribute="height" priority="250" id="Ec1-Uj-bpB"/>
                                     <constraint firstItem="pHo-FX-fXv" firstAttribute="width" secondItem="s9O-Y5-AeF" secondAttribute="width" id="Sgj-Ci-UYE"/>
+                                    <constraint firstAttribute="bottom" secondItem="pHo-FX-fXv" secondAttribute="bottom" id="VEz-9x-p4I"/>
                                     <constraint firstItem="pHo-FX-fXv" firstAttribute="leading" secondItem="s9O-Y5-AeF" secondAttribute="leading" id="d9g-Fo-MPD"/>
                                     <constraint firstAttribute="trailing" secondItem="pHo-FX-fXv" secondAttribute="trailing" id="eP6-iQ-RBn"/>
+                                    <constraint firstItem="pHo-FX-fXv" firstAttribute="top" secondItem="s9O-Y5-AeF" secondAttribute="top" id="sEO-Dq-p4S"/>
                                     <constraint firstAttribute="bottom" secondItem="pHo-FX-fXv" secondAttribute="bottom" id="wls-m9-csP"/>
                                 </constraints>
                             </scrollView>
@@ -62,7 +74,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="thb-dj-yka"/>
                     <connections>
-                        <outlet property="mLabel" destination="7ap-23-UVf" id="rIh-zz-xZQ"/>
+                        <outlet property="Btn" destination="NPm-CU-5wL" id="kZO-6j-xtj"/>
+                        <outlet property="questionLabel" destination="7ap-23-UVf" id="0Fl-jT-QFD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Nf-Zw-pJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
