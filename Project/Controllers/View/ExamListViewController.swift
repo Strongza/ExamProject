@@ -9,6 +9,9 @@ class ExamListViewController: UIViewController {
     var searchedTitle = [Datum]()
     var searching = false
     var ID: Int = 0
+    var examName: String = ""
+    var totalScore: Int = 0
+    var examCount: Int = 0
     
     
     @IBOutlet weak var mSearchBar: UISearchBar!
@@ -19,6 +22,9 @@ class ExamListViewController: UIViewController {
         super.viewDidLoad()
         self.feedData()
         mBanner.dropShadow()
+        
+        print( UIScreen.main.bounds.height )
+        
     }
     
     
@@ -37,37 +43,39 @@ class ExamListViewController: UIViewController {
     }
     
     @objc func feedData(){
-        AF.request("http://192.168.109.207:9999/exam/list_exam", method: .get).responseJSON { (response) in
-            
+
+        //AF.request("http://192.168.109.207:9999/exam/list_exam", method: .get).responseJSON { (response) in
+            AF.request("http://localhost:9000/api/exam/list_exam", method: .get).responseJSON { (response) in
+
             switch response.result{
             case .success:
                 
+                print(response)
                 do{
                     
-//                    print(response)
+                    print(response)
                     let result = try JSONDecoder().decode(ExamlistResponse.self, from: response.data!)
-                    print(result)
                     self.mDataArray = result.data
-//                    var i:Int = 0
-//                    for name in self.mDataArray {
-//                        self.Exam_name[ i ] = name.examName
-//                        i = i + 1
-//                    }
-        
-                  self.mTableView.reloadData()
+                    self.mTableView.reloadData()
                     
                 }catch{
                     
                 }
                 
             case .failure(let error):
+                print(response)
                 print("network error: \(error.localizedDescription)")
+                let alertVC = UIAlertController(title: "Network Error", message: "\(error.localizedDescription)", preferredStyle: .alert)
+                alertVC.addAction(UIAlertAction(title: "cancel", style: .cancel, handler:  { (alert) in
+                    self.dismiss(animated: true, completion: nil)
+                }))
+                self.present(alertVC, animated: true, completion: nil)
             }
             
             // 2 second
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-//                self.mRefresh.endRefreshing()
-            }
+//            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+////                self.mRefresh.endRefreshing()
+//            }
         }
     }
 }
@@ -105,14 +113,32 @@ extension ExamListViewController: UITableViewDelegate, UITableViewDataSource {
         if searching {
             let sItem = searchedTitle[indexPath.row]
              self.ID = sItem.examID
+             self.examName = sItem.examName
+             self.totalScore = sItem.examTotalScore
+             self.examCount = sItem.countQuestion
         } else {
              self.ID = item.examID
+            self.examName = item.examName
+            self.totalScore = item.examTotalScore
+            self.examCount = item.countQuestion
         }
         
-        print(self.ID)
+//        print(self.ID)
+        let storyboard = UIStoryboard(name: "Preparetoexam", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PrepareExam") as! PrepareViewController
+        vc.id = self.ID
+        vc.examName = self.examName
+        vc.totalScore = self.totalScore
+        vc.examCount = self.examCount
         
-        let storyboard = AppStoryboard.Preparetoexam.instance.instantiateViewController(withIdentifier: "PrepareExam")
-        navigationController?.pushViewController(storyboard, animated: true)
+        
+        
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+//        let storyboard = AppStoryboard.Preparetoexam.instance.instantiateViewController(withIdentifier: "PrepareExam")
+//        storyboard.id = self.ID
+//        navigationController?.pushViewController(storyboard, animated: true)
         
     }
     

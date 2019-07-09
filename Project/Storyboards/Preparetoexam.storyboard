@@ -23,69 +23,105 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="yQN-Sr-yu1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="yQN-Sr-yu1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo1" translatesAutoresizingMaskIntoConstraints="NO" id="0sM-KD-H8h">
-                                <rect key="frame" x="16" y="26" width="343" height="307"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hU0-Ka-5L9">
-                                <rect key="frame" x="36" y="426" width="302" height="156"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iKA-Bh-h9D">
+                                <rect key="frame" x="0.0" y="68" width="375" height="216"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHP-Fa-abF">
-                                        <rect key="frame" x="24" y="33" width="255" height="90"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">    ข้อสอบชุดนี้ประกอบด้วย
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo1 copy" translatesAutoresizingMaskIntoConstraints="NO" id="0sM-KD-H8h">
+                                        <rect key="frame" x="10" y="26.333333333333329" width="355" height="163.33333333333337"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="0sM-KD-H8h" secondAttribute="height" multiplier="100:46" id="yKh-f3-ABA"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0sM-KD-H8h" firstAttribute="centerY" secondItem="iKA-Bh-h9D" secondAttribute="centerY" id="F6R-60-F7n"/>
+                                    <constraint firstItem="0sM-KD-H8h" firstAttribute="centerX" secondItem="iKA-Bh-h9D" secondAttribute="centerX" id="Xe5-Bw-1OE"/>
+                                    <constraint firstAttribute="trailing" secondItem="0sM-KD-H8h" secondAttribute="trailing" constant="10" id="hoU-M1-zOR"/>
+                                    <constraint firstItem="0sM-KD-H8h" firstAttribute="leading" secondItem="iKA-Bh-h9D" secondAttribute="leading" constant="10" id="uZC-40-eFk"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asJ-JC-msH">
+                                <rect key="frame" x="0.0" y="284" width="375" height="334"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hU0-Ka-5L9">
+                                        <rect key="frame" x="35" y="132.66666666666669" width="305" height="171.33333333333331"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lHP-Fa-abF">
+                                                <rect key="frame" x="25" y="24.999999999999993" width="255" height="121.33333333333331"/>
+                                                <string key="text">ข้อสอบชุดนี้ประกอบด้วย
 - ข้อสอบจำนวน 20 ข้อ
 - คะแนนรวมทั้งหมด 20 คะแนน</string>
-                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.082807667553424835" green="0.081200562417507172" blue="0.14118289947509766" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="lHP-Fa-abF" firstAttribute="top" secondItem="hU0-Ka-5L9" secondAttribute="top" constant="25" id="8wg-pA-fGP"/>
+                                            <constraint firstAttribute="bottom" secondItem="lHP-Fa-abF" secondAttribute="bottom" constant="25" id="EOZ-hL-cJy"/>
+                                            <constraint firstAttribute="width" secondItem="hU0-Ka-5L9" secondAttribute="height" multiplier="301:169" id="HZg-g8-mfr"/>
+                                            <constraint firstAttribute="trailing" secondItem="lHP-Fa-abF" secondAttribute="trailing" constant="25" id="lrh-MV-4vp"/>
+                                            <constraint firstItem="lHP-Fa-abF" firstAttribute="leading" secondItem="hU0-Ka-5L9" secondAttribute="leading" constant="25" id="yY7-sv-FgW"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ชุดข้อสอบ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dxZ-04-gnS">
+                                        <rect key="frame" x="124.66666666666666" y="15" width="125.66666666666666" height="45"/>
+                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ข้อสอบก่อนเรียน" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fCk-K8-xND">
+                                        <rect key="frame" x="103.00000000000001" y="75" width="169.33333333333337" height="37.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.082807667553424835" green="0.081200562417507172" blue="0.14118289947509766" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="dxZ-04-gnS" firstAttribute="centerX" secondItem="asJ-JC-msH" secondAttribute="centerX" id="72d-u9-BRx"/>
+                                    <constraint firstItem="hU0-Ka-5L9" firstAttribute="leading" secondItem="asJ-JC-msH" secondAttribute="leading" constant="35" id="AdB-Cj-tre"/>
+                                    <constraint firstAttribute="trailing" secondItem="hU0-Ka-5L9" secondAttribute="trailing" constant="35" id="GfB-er-sv0"/>
+                                    <constraint firstItem="fCk-K8-xND" firstAttribute="centerX" secondItem="asJ-JC-msH" secondAttribute="centerX" id="RQF-cm-17P"/>
+                                    <constraint firstItem="hU0-Ka-5L9" firstAttribute="top" secondItem="fCk-K8-xND" secondAttribute="bottom" constant="20" id="k5O-Dk-qHx"/>
+                                    <constraint firstItem="fCk-K8-xND" firstAttribute="top" secondItem="dxZ-04-gnS" secondAttribute="bottom" constant="15" id="kzb-Te-XHd"/>
+                                    <constraint firstItem="dxZ-04-gnS" firstAttribute="top" secondItem="asJ-JC-msH" secondAttribute="top" constant="15" id="tCH-Lf-ZS7"/>
+                                    <constraint firstAttribute="bottom" secondItem="hU0-Ka-5L9" secondAttribute="bottom" constant="30" id="vGQ-DW-9oT"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ข้อสอบก่อนเรียน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCk-K8-xND">
-                                <rect key="frame" x="102" y="341" width="170" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" ชุดข้อสอบ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxZ-04-gnS">
-                                <rect key="frame" x="117" y="288" width="137" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgI-h0-zvL">
                                 <rect key="frame" x="15" y="54" width="22" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="QNk-9R-JxX"/>
-                                    <constraint firstAttribute="width" constant="22" id="ZD7-PH-jZg"/>
+                                    <constraint firstAttribute="width" constant="22" id="cHj-r3-xpP"/>
+                                    <constraint firstAttribute="height" constant="22" id="qIg-Wr-lYO"/>
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="returnToList" destination="QFR-Vj-9Ad" eventType="touchUpInside" id="e0X-La-N35"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBp-OA-Ezw">
-                                <rect key="frame" x="74" y="626" width="227" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBp-OA-Ezw">
+                                <rect key="frame" x="92.666666666666686" y="678" width="190" height="70"/>
                                 <color key="backgroundColor" red="0.044135935059999999" green="0.043090037019999999" blue="0.075646953880000006" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="1WD-4n-V0w"/>
+                                    <constraint firstAttribute="width" constant="190" id="dbZ-Ax-sg9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="20"/>
                                 <color key="tintColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="เริ่มทำข้อสอบ"/>
@@ -101,19 +137,30 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="startExam" destination="QFR-Vj-9Ad" eventType="touchUpInside" id="UeR-3u-d8I"/>
+                                    <segue destination="VZg-tU-iqD" kind="show" id="9Xu-z7-Ph5"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QgI-h0-zvL" firstAttribute="top" secondItem="uig-4v-6Ui" secondAttribute="top" constant="10" id="29N-EC-bIN"/>
-                            <constraint firstItem="yQN-Sr-yu1" firstAttribute="top" secondItem="S8M-hn-kyl" secondAttribute="top" id="Ged-wi-aN5"/>
-                            <constraint firstItem="QgI-h0-zvL" firstAttribute="leading" secondItem="uig-4v-6Ui" secondAttribute="leading" constant="15" id="Hfs-PE-T4J"/>
-                            <constraint firstItem="yQN-Sr-yu1" firstAttribute="leading" secondItem="uig-4v-6Ui" secondAttribute="leading" id="Iyv-Bv-KpG"/>
-                            <constraint firstItem="yQN-Sr-yu1" firstAttribute="height" secondItem="S8M-hn-kyl" secondAttribute="height" id="OmZ-GD-i4b"/>
-                            <constraint firstItem="yQN-Sr-yu1" firstAttribute="trailing" secondItem="uig-4v-6Ui" secondAttribute="trailing" id="voF-Yo-4pa"/>
-                            <constraint firstAttribute="bottom" secondItem="yQN-Sr-yu1" secondAttribute="bottom" id="wCh-LL-NNl"/>
+                            <constraint firstItem="iKA-Bh-h9D" firstAttribute="leading" secondItem="uig-4v-6Ui" secondAttribute="leading" id="4Mh-dA-uXm"/>
+                            <constraint firstItem="QgI-h0-zvL" firstAttribute="leading" secondItem="uig-4v-6Ui" secondAttribute="leading" constant="15" id="7IQ-tA-jqh"/>
+                            <constraint firstItem="yQN-Sr-yu1" firstAttribute="width" secondItem="uig-4v-6Ui" secondAttribute="width" id="Ba5-xG-icL"/>
+                            <constraint firstItem="asJ-JC-msH" firstAttribute="top" secondItem="iKA-Bh-h9D" secondAttribute="bottom" id="HCl-9G-kzY"/>
+                            <constraint firstItem="asJ-JC-msH" firstAttribute="centerY" secondItem="uig-4v-6Ui" secondAttribute="centerY" constant="40" id="KyI-KY-U06"/>
+                            <constraint firstItem="uig-4v-6Ui" firstAttribute="trailing" secondItem="asJ-JC-msH" secondAttribute="trailing" id="S0G-o9-Jzb"/>
+                            <constraint firstItem="uig-4v-6Ui" firstAttribute="bottom" secondItem="vBp-OA-Ezw" secondAttribute="bottom" constant="30" id="UFu-6f-uD5"/>
+                            <constraint firstItem="QgI-h0-zvL" firstAttribute="top" secondItem="uig-4v-6Ui" secondAttribute="top" constant="10" id="UOv-lk-fPy"/>
+                            <constraint firstItem="asJ-JC-msH" firstAttribute="width" secondItem="uig-4v-6Ui" secondAttribute="width" id="W1t-XH-PCe"/>
+                            <constraint firstItem="yQN-Sr-yu1" firstAttribute="top" secondItem="S8M-hn-kyl" secondAttribute="top" id="X5l-0l-y1m"/>
+                            <constraint firstItem="yQN-Sr-yu1" firstAttribute="height" secondItem="S8M-hn-kyl" secondAttribute="height" id="cAo-Xs-oqh"/>
+                            <constraint firstItem="asJ-JC-msH" firstAttribute="leading" secondItem="uig-4v-6Ui" secondAttribute="leading" id="h0m-lX-h6z"/>
+                            <constraint firstItem="yQN-Sr-yu1" firstAttribute="leading" secondItem="uig-4v-6Ui" secondAttribute="leading" id="hyj-86-0rE"/>
+                            <constraint firstItem="iKA-Bh-h9D" firstAttribute="trailing" secondItem="uig-4v-6Ui" secondAttribute="trailing" id="jrY-kB-2Hs"/>
+                            <constraint firstItem="QgI-h0-zvL" firstAttribute="bottom" secondItem="iKA-Bh-h9D" secondAttribute="firstBaseline" constant="8" symbolType="layoutAnchor" id="lr3-Fj-0Za"/>
+                            <constraint firstItem="yQN-Sr-yu1" firstAttribute="trailing" secondItem="uig-4v-6Ui" secondAttribute="trailing" id="v5d-Et-P16"/>
+                            <constraint firstItem="vBp-OA-Ezw" firstAttribute="centerX" secondItem="S8M-hn-kyl" secondAttribute="centerX" id="y3D-h0-QiZ"/>
+                            <constraint firstAttribute="bottom" secondItem="yQN-Sr-yu1" secondAttribute="bottom" id="yCk-dQ-eYw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uig-4v-6Ui"/>
                         <userDefinedRuntimeAttributes>
@@ -131,6 +178,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YzT-Ny-MdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1634.4000000000001" y="158.86699507389164"/>
+        </scene>
+        <!--ExamTest-->
+        <scene sceneID="YbI-6r-qku">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ExamTest" id="VZg-tU-iqD" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Qzh-cp-OiA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlD-wQ-ZGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2469" y="273"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Z5M-s2-D79">
@@ -152,7 +209,7 @@
     </scenes>
     <resources>
         <image name="Background" width="1125" height="2436"/>
-        <image name="Logo1" width="500" height="500"/>
+        <image name="Logo1 copy" width="500" height="234"/>
         <image name="back" width="64" height="64"/>
     </resources>
 </document>
