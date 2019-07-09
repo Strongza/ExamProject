@@ -23,6 +23,8 @@ class ExamListViewController: UIViewController {
         self.feedData()
         mBanner.dropShadow()
         
+        print( UIScreen.main.bounds.height )
+        
     }
     
     
@@ -121,7 +123,7 @@ extension ExamListViewController: UITableViewDelegate, UITableViewDataSource {
             self.examCount = item.countQuestion
         }
         
-        print(self.ID)
+//        print(self.ID)
         let storyboard = UIStoryboard(name: "Preparetoexam", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "PrepareExam") as! PrepareViewController
         vc.id = self.ID
