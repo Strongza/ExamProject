@@ -10,6 +10,8 @@ import UIKit
 
 class ExamListTableViewCell: UITableViewCell {
     
+    
+    
     @IBOutlet weak var mCardView: UIView!
     @IBOutlet weak var mTextLabel: UILabel!
     override func awakeFromNib() {
