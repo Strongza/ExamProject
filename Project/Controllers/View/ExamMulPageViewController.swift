@@ -9,9 +9,20 @@ class ExamMulPageViewController: UIViewController {
     @IBOutlet weak var mButton4: UIButton!
     @IBOutlet weak var radioButtom: DLRadioButton!
     
+    @IBOutlet weak var mQuestion: UILabel!
+    
+    //Variable from prepare data
+    var question : String = ""
+    var choices : [Choice] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setButtonStyle()
+        mQuestion.text = self.question
+        mButton2.setTitle("Test", for: .normal)
+        mButton3.setTitle("Test", for: .normal)
+        mButton4.setTitle("Test", for: .normal)
+        radioButtom.setTitle("Test", for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
