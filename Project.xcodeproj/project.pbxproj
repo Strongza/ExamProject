@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4014595122C5AFF200B0CDD1 /* CustomExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4014595022C5AFF200B0CDD1 /* CustomExtension.swift */; };
 		405365DB22C4E2B500A6DDA3 /* kanit-light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 405365DA22C4E2B500A6DDA3 /* kanit-light.otf */; };
-		405365DD22C4E2C900A6DDA3 /* Exam.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 405365DC22C4E2C900A6DDA3 /* Exam.storyboard */; };
 		405365E122C4E2E900A6DDA3 /* ExamMulPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405365DE22C4E2E800A6DDA3 /* ExamMulPageViewController.swift */; };
 		405365E222C4E2E900A6DDA3 /* ExamPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405365DF22C4E2E800A6DDA3 /* ExamPageViewController.swift */; };
 		405365E322C4E2E900A6DDA3 /* ExamPicPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405365E022C4E2E800A6DDA3 /* ExamPicPageViewController.swift */; };
@@ -28,19 +27,15 @@
 		B04E2F3F22C4CF38002AE077 /* Kanit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B04E2F3E22C4CF38002AE077 /* Kanit-Regular.ttf */; };
 		B04E2F4422C511D0002AE077 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04E2F4322C511D0002AE077 /* Result.storyboard */; };
 		B04E2F4622C52269002AE077 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04E2F4522C52269002AE077 /* ResultViewController.swift */; };
-		B0D5600922D34B6C00314667 /* ExamTestMultiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5600822D34B6C00314667 /* ExamTestMultiViewController.swift */; };
+		B0D5600922D34B6C00314667 /* ExamTextMultiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5600822D34B6C00314667 /* ExamTextMultiViewController.swift */; };
 		B0D5600B22D38A5400314667 /* ExamPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5600A22D38A5400314667 /* ExamPicViewController.swift */; };
 		B0D5A01C22CC356F0006EA90 /* ExamlistResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5A01B22CC356F0006EA90 /* ExamlistResponse.swift */; };
 		B0D8645222D464E800495463 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D8645122D464E800495463 /* MasterViewController.swift */; };
 		B0ED361522D4279F00C42907 /* ExamPicMulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ED361422D4279F00C42907 /* ExamPicMulViewController.swift */; };
-		B0FD65C622CEE03A0002C4B3 /* ExamTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FD65C522CEE03A0002C4B3 /* ExamTest.storyboard */; };
-		B0FD65C822CEE2B70002C4B3 /* ExamTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD65C722CEE2B70002C4B3 /* ExamTestViewController.swift */; };
+		B0FD65C622CEE03A0002C4B3 /* Exam.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FD65C522CEE03A0002C4B3 /* Exam.storyboard */; };
+		B0FD65C822CEE2B70002C4B3 /* ExamTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD65C722CEE2B70002C4B3 /* ExamTextViewController.swift */; };
 		CE8797057EF34804EC748F34 /* Pods_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33858279949F611912B76901 /* Pods_Project.framework */; };
 		FD55561022CD994B00AF5A0F /* ExamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD55560F22CD994B00AF5A0F /* ExamResponse.swift */; };
-		FD55561222D228F500AF5A0F /* ExamSingleTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD55561122D228F500AF5A0F /* ExamSingleTextViewController.swift */; };
-		FD55561422D2B94C00AF5A0F /* ExamMultiTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD55561322D2B94C00AF5A0F /* ExamMultiTextViewController.swift */; };
-		FD55561622D2B98800AF5A0F /* ExamSinglePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD55561522D2B98800AF5A0F /* ExamSinglePicViewController.swift */; };
-		FD55561822D2B99800AF5A0F /* ExamMultiPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD55561722D2B99800AF5A0F /* ExamMultiPicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +44,6 @@
 		3D1C8FCE1857077CBDC17035 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		4014595022C5AFF200B0CDD1 /* CustomExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExtension.swift; sourceTree = "<group>"; };
 		405365DA22C4E2B500A6DDA3 /* kanit-light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "kanit-light.otf"; sourceTree = "<group>"; };
-		405365DC22C4E2C900A6DDA3 /* Exam.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Exam.storyboard; sourceTree = "<group>"; };
 		405365DE22C4E2E800A6DDA3 /* ExamMulPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamMulPageViewController.swift; sourceTree = "<group>"; };
 		405365DF22C4E2E800A6DDA3 /* ExamPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamPageViewController.swift; sourceTree = "<group>"; };
 		405365E022C4E2E800A6DDA3 /* ExamPicPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamPicPageViewController.swift; sourceTree = "<group>"; };
@@ -70,18 +64,14 @@
 		B04E2F3E22C4CF38002AE077 /* Kanit-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Regular.ttf"; sourceTree = "<group>"; };
 		B04E2F4322C511D0002AE077 /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		B04E2F4522C52269002AE077 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		B0D5600822D34B6C00314667 /* ExamTestMultiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamTestMultiViewController.swift; sourceTree = "<group>"; };
+		B0D5600822D34B6C00314667 /* ExamTextMultiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamTextMultiViewController.swift; sourceTree = "<group>"; };
 		B0D5600A22D38A5400314667 /* ExamPicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamPicViewController.swift; sourceTree = "<group>"; };
 		B0D5A01B22CC356F0006EA90 /* ExamlistResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamlistResponse.swift; sourceTree = "<group>"; };
-		FD55560F22CD994B00AF5A0F /* ExamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamResponse.swift; sourceTree = "<group>"; };
-		FD55561122D228F500AF5A0F /* ExamSingleTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamSingleTextViewController.swift; sourceTree = "<group>"; };
-		FD55561322D2B94C00AF5A0F /* ExamMultiTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamMultiTextViewController.swift; sourceTree = "<group>"; };
-		FD55561522D2B98800AF5A0F /* ExamSinglePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamSinglePicViewController.swift; sourceTree = "<group>"; };
-		FD55561722D2B99800AF5A0F /* ExamMultiPicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamMultiPicViewController.swift; sourceTree = "<group>"; };
 		B0D8645122D464E800495463 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		B0ED361422D4279F00C42907 /* ExamPicMulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamPicMulViewController.swift; sourceTree = "<group>"; };
-		B0FD65C522CEE03A0002C4B3 /* ExamTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExamTest.storyboard; sourceTree = "<group>"; };
-		B0FD65C722CEE2B70002C4B3 /* ExamTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamTestViewController.swift; sourceTree = "<group>"; };
+		B0FD65C522CEE03A0002C4B3 /* Exam.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Exam.storyboard; sourceTree = "<group>"; };
+		B0FD65C722CEE2B70002C4B3 /* ExamTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamTextViewController.swift; sourceTree = "<group>"; };
+		FD55560F22CD994B00AF5A0F /* ExamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +96,6 @@
 				405365E022C4E2E800A6DDA3 /* ExamPicPageViewController.swift */,
 				405365DE22C4E2E800A6DDA3 /* ExamMulPageViewController.swift */,
 				B04E2F4522C52269002AE077 /* ResultViewController.swift */,
-				FD55561122D228F500AF5A0F /* ExamSingleTextViewController.swift */,
-				FD55561322D2B94C00AF5A0F /* ExamMultiTextViewController.swift */,
-				FD55561522D2B98800AF5A0F /* ExamSinglePicViewController.swift */,
-				FD55561722D2B99800AF5A0F /* ExamMultiPicViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,9 +132,8 @@
 			children = (
 				B035983422C48D1200DD9D55 /* ExamList.storyboard */,
 				5379922622C4D60A0074E48F /* Preparetoexam.storyboard */,
-				405365DC22C4E2C900A6DDA3 /* Exam.storyboard */,
 				B04E2F4322C511D0002AE077 /* Result.storyboard */,
-				B0FD65C522CEE03A0002C4B3 /* ExamTest.storyboard */,
+				B0FD65C522CEE03A0002C4B3 /* Exam.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -219,8 +204,8 @@
 		B0D5600C22D38A5800314667 /* Exam */ = {
 			isa = PBXGroup;
 			children = (
-				B0FD65C722CEE2B70002C4B3 /* ExamTestViewController.swift */,
-				B0D5600822D34B6C00314667 /* ExamTestMultiViewController.swift */,
+				B0FD65C722CEE2B70002C4B3 /* ExamTextViewController.swift */,
+				B0D5600822D34B6C00314667 /* ExamTextMultiViewController.swift */,
 				B0D5600A22D38A5400314667 /* ExamPicViewController.swift */,
 				B0ED361422D4279F00C42907 /* ExamPicMulViewController.swift */,
 				B0D8645122D464E800495463 /* MasterViewController.swift */,
@@ -299,11 +284,10 @@
 			files = (
 				5379922722C4D60A0074E48F /* Preparetoexam.storyboard in Resources */,
 				B04E2F4422C511D0002AE077 /* Result.storyboard in Resources */,
-				405365DD22C4E2C900A6DDA3 /* Exam.storyboard in Resources */,
 				B04E2F3F22C4CF38002AE077 /* Kanit-Regular.ttf in Resources */,
 				B035982D22C48B7000DD9D55 /* LaunchScreen.storyboard in Resources */,
 				B035983522C48D1200DD9D55 /* ExamList.storyboard in Resources */,
-				B0FD65C622CEE03A0002C4B3 /* ExamTest.storyboard in Resources */,
+				B0FD65C622CEE03A0002C4B3 /* Exam.storyboard in Resources */,
 				B035982A22C48B7000DD9D55 /* Assets.xcassets in Resources */,
 				405365DB22C4E2B500A6DDA3 /* kanit-light.otf in Resources */,
 				B035982822C48B6F00DD9D55 /* Main.storyboard in Resources */,
@@ -359,28 +343,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD55561822D2B99800AF5A0F /* ExamMultiPicViewController.swift in Sources */,
 				4014595122C5AFF200B0CDD1 /* CustomExtension.swift in Sources */,
-				B0FD65C822CEE2B70002C4B3 /* ExamTestViewController.swift in Sources */,
+				B0FD65C822CEE2B70002C4B3 /* ExamTextViewController.swift in Sources */,
 				B0ED361522D4279F00C42907 /* ExamPicMulViewController.swift in Sources */,
 				5379922922C4D6F90074E48F /* PrepareViewController.swift in Sources */,
-				FD55561422D2B94C00AF5A0F /* ExamMultiTextViewController.swift in Sources */,
 				B035983922C48E2F00DD9D55 /* AppStoryboard.swift in Sources */,
 				B035982522C48B6F00DD9D55 /* ViewController.swift in Sources */,
 				405365E322C4E2E900A6DDA3 /* ExamPicPageViewController.swift in Sources */,
-				FD55561622D2B98800AF5A0F /* ExamSinglePicViewController.swift in Sources */,
 				B035982322C48B6F00DD9D55 /* AppDelegate.swift in Sources */,
 				405365E222C4E2E900A6DDA3 /* ExamPageViewController.swift in Sources */,
 				B035983722C48DBC00DD9D55 /* ExamListViewController.swift in Sources */,
 				B035983D22C491AA00DD9D55 /* ExamListTableViewCell.swift in Sources */,
 				B035983B22C4918600DD9D55 /* CMExtension.swift in Sources */,
 				FD55561022CD994B00AF5A0F /* ExamResponse.swift in Sources */,
-				B0D5600922D34B6C00314667 /* ExamTestMultiViewController.swift in Sources */,
+				B0D5600922D34B6C00314667 /* ExamTextMultiViewController.swift in Sources */,
 				B0D5600B22D38A5400314667 /* ExamPicViewController.swift in Sources */,
 				B0D8645222D464E800495463 /* MasterViewController.swift in Sources */,
 				405365E122C4E2E900A6DDA3 /* ExamMulPageViewController.swift in Sources */,
 				B04E2F4622C52269002AE077 /* ResultViewController.swift in Sources */,
-				FD55561222D228F500AF5A0F /* ExamSingleTextViewController.swift in Sources */,
 				B0D5A01C22CC356F0006EA90 /* ExamlistResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

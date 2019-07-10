@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import Alamofire
 
 class MasterViewController: UIViewController {
     
-    var index: Int = 1
+    @IBOutlet weak var mPreviousButton: UIButton!
+    @IBOutlet weak var mNextButton: UIButton!
     
-    lazy var examtestViewController: ExamTestViewController = {
-        let storyboard = UIStoryboard(name: "ExamTest", bundle: Bundle.main)
+    var index: Int = 1
+    var mExamAll : [QuestionElement] = []
+    var mAnswerAll : [Int] = []
+    var currentExam : Int = 0
+    
+    lazy var examtextViewController: ExamTextViewController = {
+        let storyboard = UIStoryboard(name: "Exam", bundle: Bundle.main)
         
-        var viewController = storyboard.instantiateViewController(withIdentifier: "ExamTestViewController") as! ExamTestViewController
+        var viewController = storyboard.instantiateViewController(withIdentifier: "ExamTextViewController") as! ExamTextViewController
         self.addViewControllerAsChildViewController(childViewController: viewController)
         
         return viewController
@@ -23,7 +30,7 @@ class MasterViewController: UIViewController {
     }()
     
     lazy var exampicViewController: ExamPicViewController = {
-        let storyboard = UIStoryboard(name: "ExamTest", bundle: Bundle.main)
+        let storyboard = UIStoryboard(name: "Exam", bundle: Bundle.main)
         
         var viewController = storyboard.instantiateViewController(withIdentifier: "ExamPicViewController") as! ExamPicViewController
         self.addViewControllerAsChildViewController(childViewController: viewController)
@@ -32,10 +39,10 @@ class MasterViewController: UIViewController {
         
     }()
     
-    lazy var examtestmultiViewController: ExamTestMultiViewController = {
-        let storyboard = UIStoryboard(name: "ExamTest", bundle: Bundle.main)
+    lazy var examtextmultiViewController: ExamTextMultiViewController = {
+        let storyboard = UIStoryboard(name: "Exam", bundle: Bundle.main)
         
-        var viewController = storyboard.instantiateViewController(withIdentifier: "ExamTestMultiViewController") as! ExamTestMultiViewController
+        var viewController = storyboard.instantiateViewController(withIdentifier: "ExamTextMultiViewController") as! ExamTextMultiViewController
         self.addViewControllerAsChildViewController(childViewController: viewController)
         
         return viewController
@@ -43,7 +50,7 @@ class MasterViewController: UIViewController {
     }()
     
     lazy var exampicmulViewController: ExamPicMulViewController = {
-        let storyboard = UIStoryboard(name: "ExamTest", bundle: Bundle.main)
+        let storyboard = UIStoryboard(name: "Exam", bundle: Bundle.main)
         
         var viewController = storyboard.instantiateViewController(withIdentifier: "ExamPicMulViewController") as! ExamPicMulViewController
         self.addViewControllerAsChildViewController(childViewController: viewController)
@@ -56,45 +63,61 @@ class MasterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.feedData()
         setupView()
-    
-        examtestViewController.questionLabel.text = " ส่งค่านาจาาาา "
-        
-
     }
     
     private func setupView(){
         
-        updateView()
-        
+        btnChange()
     }
     
     private func updateView(){
-        
+        print("🐡🐡🐡🐡 \(self.mExamAll[self.currentExam].choices)")
+//        var mQuestionText: String = "Test"
+//        var mChoice: [Choice] = []
+        var mQuestionText: String = self.mExamAll[self.currentExam].question.questionText
+        var mChoice: [Choice] = self.mExamAll[self.currentExam].choices
         switch index {
         case 1:
-            examtestViewController.view.isHidden = false
-            examtestmultiViewController.view.isHidden = true
+            examtextViewController.view.isHidden = false
+            examtextmultiViewController.view.isHidden = true
             exampicViewController.view.isHidden = true
             exampicmulViewController.view.isHidden = true
+            
+            examtextViewController.question = mQuestionText
+            examtextViewController.choice = mChoice
+            examtextViewController.loaddata()
         case 2:
-            examtestViewController.view.isHidden = true
-            examtestmultiViewController.view.isHidden = false
+            examtextViewController.view.isHidden = true
+            examtextmultiViewController.view.isHidden = false
             exampicViewController.view.isHidden = true
             exampicmulViewController.view.isHidden = true
+            
+            examtextmultiViewController.question = mQuestionText
+            examtextmultiViewController.choice = mChoice
+            examtextmultiViewController.loaddata()
         case 3:
-            examtestViewController.view.isHidden = true
-            examtestmultiViewController.view.isHidden = true
+            examtextViewController.view.isHidden = true
+            examtextmultiViewController.view.isHidden = true
             exampicViewController.view.isHidden = false
             exampicmulViewController.view.isHidden = true
+            
+            exampicViewController.question = mQuestionText
+            exampicViewController.choice = mChoice
+            exampicViewController.loaddata()
         case 4:
-            examtestViewController.view.isHidden = true
-            examtestmultiViewController.view.isHidden = true
+            examtextViewController.view.isHidden = true
+            examtextmultiViewController.view.isHidden = true
             exampicViewController.view.isHidden = true
             exampicmulViewController.view.isHidden = false
+            
+            exampicmulViewController.question = mQuestionText
+            exampicmulViewController.choice = mChoice
+            exampicmulViewController.loaddata()
         default:
-            examtestViewController.view.isHidden = true
-            examtestmultiViewController.view.isHidden = true
+            examtextViewController.view.isHidden = true
+            examtextmultiViewController.view.isHidden = true
             exampicViewController.view.isHidden = true
             exampicmulViewController.view.isHidden = true
         }
@@ -112,15 +135,101 @@ class MasterViewController: UIViewController {
     
     
     @IBAction func Previous(_ sender: Any) {
-        index -= 1
+//        index -= 1
+        if self.currentExam == 0 {
+            //disable back button
+        } else {
+            self.currentExam -= 1
+        }
+        let examType = self.mExamAll[self.currentExam].question.questionType
+        let examChoiceType = self.mExamAll[self.currentExam].choices[0].choicePic
+        self.selectExamView(examType: examType, examChoiceType: examChoiceType)
+        print("🐳 \(examType)")
+        print("🐞 \(examChoiceType)")
+        print("🐡 \(currentExam)")
         print(index)
         updateView()
-        
+        btnChange()
     }
     @IBAction func Next(_ sender: Any) {
-        index += 1
+        if currentExam == (self.mExamAll.count)-1 {
+            //finish button
+            let storyboard = UIStoryboard(name: "Result", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Result") as! ResultViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            currentExam += 1
+        }
+        let examType = self.mExamAll[self.currentExam].question.questionType
+        let examChoiceType = self.mExamAll[self.currentExam].choices[0].choicePic
+        self.selectExamView(examType: examType, examChoiceType: examChoiceType)
+        print("🐳 \(examType)")
+        print("🐞 \(examChoiceType)")
+        print("🐡 \(currentExam)")
         print(index)
         updateView()
+        btnChange()
+        examtextViewController.setupStyle()
     }
     
+    @objc func feedData(){
+        AF.request("http://localhost:9000/api/exam/1", method: .get).responseJSON { (response) in
+            
+            switch response.result{
+            case .success:
+                
+                do{
+                    let result = try JSONDecoder().decode(ExamResponse.self, from: response.data!)
+                    self.mExamAll = result.data.questions
+                    let examType = self.mExamAll[self.currentExam].question.questionType
+                    let examChoiceType = self.mExamAll[self.currentExam].choices[0].choicePic
+                    
+                    print("🐳 \(examType)")
+                    print("🐞 \(examChoiceType)")
+                    self.selectExamView(examType: examType, examChoiceType: examChoiceType)
+                    
+                    self.updateView()
+                }catch{
+                    print("network error: \(error.localizedDescription)")
+                }
+            case .failure(let error):
+                print("network error: \(error.localizedDescription)")
+            }
+            // 2 second
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            }
+        }
+    }
+    
+    func btnChange(){
+        switch currentExam {
+        case 0:
+            mPreviousButton.isHidden = true
+        case self.mExamAll.count-1:
+            mNextButton.setTitle("Finish", for: .normal)
+        default:
+            mPreviousButton.isHidden = false
+            mNextButton.isHidden = false
+        }
+    }
+    
+    func selectExamView(examType: String, examChoiceType: String?) {
+        if examType == "single" {
+            if examChoiceType == nil {
+                //single choice and text choice
+                index = 1
+            } else {
+                //single choice and picture choice
+                index = 3
+            }
+        } else if examType == "multiple" {
+            if examChoiceType == nil {
+                //multi choice and text choice
+                index = 2
+            } else {
+                //multi choice and picture choice
+                index = 4
+            }
+        }
+    }
 }

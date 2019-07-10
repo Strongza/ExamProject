@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExamTestViewController: UIViewController {
+class ExamTextViewController: UIViewController {
     
     @IBOutlet weak var questionLabel:UILabel!
     @IBOutlet weak var ansLabel:UILabel!
@@ -19,35 +19,28 @@ class ExamTestViewController: UIViewController {
     @IBOutlet weak var mAns3: UIView!
     @IBOutlet weak var mAns4: UIView!
     
-    var str: String!
+    @IBOutlet weak var mAns1Label: UILabel!
+    @IBOutlet weak var mAns2Label: UILabel!
+    @IBOutlet weak var mAns3Label: UILabel!
+    @IBOutlet weak var mAns4Label: UILabel!
+    
+    var question: String! = ""
+    var choice: [Choice] = []
+    
+    var str: String! = ""
     var showMore: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        loaddata()
-        
-        
+   
         setupStyle()
      
-        
-        
-        
-       
-        
     }
-    
-
     
     @IBAction func clickAns(sender : UIButton){
-        
         let Ans: String! = sender.titleLabel!.text!
         selected(Ans: Ans)
-        
-       
-        
     }
     
-    
-
     @IBAction func addQuestion() {
         showMore = !showMore
         if showMore {
@@ -62,16 +55,11 @@ class ExamTestViewController: UIViewController {
                 questionLabel.text = "\(mySubstring)"
             }
             ShowBtn.setTitle("Read More", for: UIControl.State.normal)
-            
         }
-        
-        
-        
     }
     
-
     func loaddata(){
-        str = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        str = question
         //str = "aaaaaaaaa"
         if ( UIScreen.main.bounds.height <= 568 ){
             if str.count>=150{
@@ -90,9 +78,15 @@ class ExamTestViewController: UIViewController {
                 questionLabel.text = "\(str!)"
             }
         }
-
+        setLabel()
     }
     
+    func setLabel() {
+        mAns1Label.text = choice[0].choiceText
+        mAns2Label.text = choice[1].choiceText
+        mAns3Label.text = choice[2].choiceText
+        mAns4Label.text = choice[3].choiceText
+    }
     
     func setupStyle() {
         mAns1.backgroundColor = #colorLiteral(red: 0.2549019608, green: 0.2549019608, blue: 0.2549019608, alpha: 0.4295269692)

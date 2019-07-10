@@ -19,37 +19,33 @@ class ExamPicMulViewController: UIViewController {
     @IBOutlet weak var mAns3: UIButton!
     @IBOutlet weak var mAns4: UIButton!
     
+    @IBOutlet weak var mAnsPic1: UIImageView!
+    @IBOutlet weak var mAnsPic2: UIImageView!
+    @IBOutlet weak var mAnsPic3: UIImageView!
+    @IBOutlet weak var mAnsPic4: UIImageView!
+    
+    var question: String! = ""
+    var choice: [Choice] = []
+    
     var str: String!
     var showMore: Bool = false
     var isOne: Bool = false
     var isTwo: Bool = false
     var isThree: Bool = false
     var isFour: Bool = false
-    
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        loaddata()
-        
-        
         setupStyle()
-        
-        
-        
-        
     }
-    
-    
-    
+
     @IBAction func clickAns(sender : UIButton){
         
         let Ans: String! = sender.titleLabel!.text!
         selected(Ans: Ans)
         
     }
-    
-    
-    
+ 
     @IBAction func addQuestion() {
         showMore = !showMore
         if showMore {
@@ -64,17 +60,12 @@ class ExamPicMulViewController: UIViewController {
                 questionLabel.text = "\(mySubstring)"
             }
             ShowBtn.setTitle("Read More", for: UIControl.State.normal)
-            
         }
-        
-        
-        
     }
-    
-    
+
     func loaddata(){
-        str = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        //str = "aaaaaaaaa"
+//        str = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        str = question
         if ( UIScreen.main.bounds.height <= 568 ){
             if str.count>=100{
                 let mySubstring = str.prefix(100)
@@ -92,10 +83,9 @@ class ExamPicMulViewController: UIViewController {
                 questionLabel.text = "\(str!)"
             }
         }
-        
+        setAnsImage()
     }
-    
-    
+
     func setupStyle() {
         mAns1.backgroundColor = #colorLiteral(red: 0.2549019608, green: 0.2549019608, blue: 0.2549019608, alpha: 0)
         mAns2.backgroundColor = #colorLiteral(red: 0.2549019608, green: 0.2549019608, blue: 0.2549019608, alpha: 0)
@@ -146,4 +136,10 @@ class ExamPicMulViewController: UIViewController {
         }
     }
     
+    func setAnsImage() {
+        mAnsPic1.af_setImage(withURL: choice[0].choicePic!.toURL())
+        mAnsPic2.af_setImage(withURL: choice[1].choicePic!.toURL())
+        mAnsPic3.af_setImage(withURL: choice[2].choicePic!.toURL())
+        mAnsPic4.af_setImage(withURL: choice[3].choicePic!.toURL())
+    }
 }
