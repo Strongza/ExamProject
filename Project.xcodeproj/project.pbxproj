@@ -36,6 +36,8 @@
 		B0FD65C822CEE2B70002C4B3 /* ExamTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD65C722CEE2B70002C4B3 /* ExamTextViewController.swift */; };
 		CE8797057EF34804EC748F34 /* Pods_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33858279949F611912B76901 /* Pods_Project.framework */; };
 		FD55561022CD994B00AF5A0F /* ExamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD55560F22CD994B00AF5A0F /* ExamResponse.swift */; };
+		FDE6B28522D5CF0B001161F1 /* ExamResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE6B28422D5CF0B001161F1 /* ExamResponseTest.swift */; };
+		FDE6B28722D5EBF1001161F1 /* GoHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE6B28622D5EBF1001161F1 /* GoHome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		B0FD65C522CEE03A0002C4B3 /* Exam.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Exam.storyboard; sourceTree = "<group>"; };
 		B0FD65C722CEE2B70002C4B3 /* ExamTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamTextViewController.swift; sourceTree = "<group>"; };
 		FD55560F22CD994B00AF5A0F /* ExamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamResponse.swift; sourceTree = "<group>"; };
+		FDE6B28422D5CF0B001161F1 /* ExamResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamResponseTest.swift; sourceTree = "<group>"; };
+		FDE6B28622D5EBF1001161F1 /* GoHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoHome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,8 @@
 			children = (
 				B0D5A01B22CC356F0006EA90 /* ExamlistResponse.swift */,
 				FD55560F22CD994B00AF5A0F /* ExamResponse.swift */,
+				FDE6B28422D5CF0B001161F1 /* ExamResponseTest.swift */,
+				FDE6B28622D5EBF1001161F1 /* GoHome.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -354,12 +360,14 @@
 				405365E222C4E2E900A6DDA3 /* ExamPageViewController.swift in Sources */,
 				B035983722C48DBC00DD9D55 /* ExamListViewController.swift in Sources */,
 				B035983D22C491AA00DD9D55 /* ExamListTableViewCell.swift in Sources */,
+				FDE6B28522D5CF0B001161F1 /* ExamResponseTest.swift in Sources */,
 				B035983B22C4918600DD9D55 /* CMExtension.swift in Sources */,
 				FD55561022CD994B00AF5A0F /* ExamResponse.swift in Sources */,
 				B0D5600922D34B6C00314667 /* ExamTextMultiViewController.swift in Sources */,
 				B0D5600B22D38A5400314667 /* ExamPicViewController.swift in Sources */,
 				B0D8645222D464E800495463 /* MasterViewController.swift in Sources */,
 				405365E122C4E2E900A6DDA3 /* ExamMulPageViewController.swift in Sources */,
+				FDE6B28722D5EBF1001161F1 /* GoHome.swift in Sources */,
 				B04E2F4622C52269002AE077 /* ResultViewController.swift in Sources */,
 				B0D5A01C22CC356F0006EA90 /* ExamlistResponse.swift in Sources */,
 			);

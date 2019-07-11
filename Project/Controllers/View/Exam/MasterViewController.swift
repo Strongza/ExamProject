@@ -174,13 +174,51 @@ class MasterViewController: UIViewController {
     
     @objc func feedData(){
         AF.request("http://localhost:9000/api/exam/1", method: .get).responseJSON { (response) in
-            
+//        AF.request("http://192.168.109.95:8085/api/exam/1", method: .get).responseJSON { (response) in
+    
             switch response.result{
-            case .success:
+            case .success(let value):
+                
+//                var result = value as! [String:Any]
+//              var data = result["data"]
+//
+//                  var temp = data as! [String:Any]
+//
+//
+//                     var final = temp["questions"]
+//
+//                print(final)
+//
+                
                 
                 do{
-                    let result = try JSONDecoder().decode(ExamResponse.self, from: response.data!)
+                    print("🐳🐳🐳🐳🐳🐳🐳🐳🐳🐳🐳🐳")
+                    print("☄️\(response.data)")
+                    
+                
+                    
+                    
+                    let result = try JSONDecoder().decode(GoHome.self, from: response.data!)
+//                    let decodedString = String(DataClass: result.data, encoding: String.Encoding.utf8)
+//                    print(decodedString ?? "") // decodedString
+                    
+                    print("⭐️\(result.data)")
                     self.mExamAll = result.data.questions
+                    
+                   
+                    
+//
+//                    let allLogs = string.components(separatedBy: .newlines)
+//                        .filter { $0 != "" }
+//                        .map { jsonLine -> Log? in
+//                            guard let data = jsonLine.data(using: .utf8) else {
+//                                return nil
+//                            }
+//                            return try? jsonDecoder.decode(Log.self, from: data)
+//                        }.flatMap { $0 }
+                    
+                    
+                    
                     let examType = self.mExamAll[self.currentExam].question.questionType
                     let examChoiceType = self.mExamAll[self.currentExam].choices[0].choicePic
                     
