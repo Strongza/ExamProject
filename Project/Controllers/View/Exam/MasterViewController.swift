@@ -68,7 +68,6 @@ class MasterViewController: UIViewController {
     }
     
     private func setupView(){
-        
         btnChange()
     }
     
@@ -144,12 +143,13 @@ class MasterViewController: UIViewController {
         let examType = self.mExamAll[self.currentExam].question.questionType
         let examChoiceType = self.mExamAll[self.currentExam].choices[0].choicePic
         self.selectExamView(examType: examType, examChoiceType: examChoiceType)
-        print("🐳 \(examType)")
-        print("🐞 \(examChoiceType)")
-        print("🐡 \(currentExam)")
-        print(index)
+//        print("🐳 \(examType)")
+//        print("🐞 \(examChoiceType)")
+//        print("🐡 \(currentExam)")
+//        print(index)
         updateView()
         btnChange()
+        clearSelected()
     }
     @IBAction func Next(_ sender: Any) {
         if currentExam == (self.mExamAll.count)-1 {
@@ -163,13 +163,13 @@ class MasterViewController: UIViewController {
         let examType = self.mExamAll[self.currentExam].question.questionType
         let examChoiceType = self.mExamAll[self.currentExam].choices[0].choicePic
         self.selectExamView(examType: examType, examChoiceType: examChoiceType)
-        print("🐳 \(examType)")
-        print("🐞 \(examChoiceType)")
-        print("🐡 \(currentExam)")
-        print(index)
+//        print("🐳 \(examType)")
+//        print("🐞 \(examChoiceType)")
+//        print("🐡 \(currentExam)")
+//        print(index)
         updateView()
         btnChange()
-        examtextViewController.setupStyle()
+        clearSelected()
     }
     
     @objc func feedData(){
@@ -231,5 +231,12 @@ class MasterViewController: UIViewController {
                 index = 4
             }
         }
+    }
+    
+    func clearSelected(){
+        examtextViewController.setupStyle()
+        examtextmultiViewController.setupStyle()
+        exampicViewController.setupStyle()
+        exampicmulViewController.setupStyle()
     }
 }
