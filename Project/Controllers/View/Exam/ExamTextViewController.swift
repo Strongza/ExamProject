@@ -29,6 +29,7 @@ class ExamTextViewController: UIViewController {
     
     var str: String! = ""
     var showMore: Bool = false
+    var selected: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
    
@@ -59,6 +60,10 @@ class ExamTextViewController: UIViewController {
     }
     
     func loaddata(){
+        if selected != 0 {
+            selected(Ans: String(selected))
+        }
+        
         str = question
         //str = "aaaaaaaaa"
         if ( UIScreen.main.bounds.height <= 568 ){
@@ -96,7 +101,7 @@ class ExamTextViewController: UIViewController {
     }
     
     func selected(Ans: String){
-        print(Ans)
+        selected = Int(Ans)!
         switch Int(Ans) {
         case 1:
             mAns1.backgroundColor = #colorLiteral(red: 0.4094731808, green: 0.3512327075, blue: 0.5621764064, alpha: 0.638859161)

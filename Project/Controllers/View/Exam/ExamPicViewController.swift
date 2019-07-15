@@ -30,6 +30,7 @@ class ExamPicViewController: UIViewController {
     
     var str: String!
     var showMore: Bool = false
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -35,6 +35,9 @@ class ExamTextMultiViewController: UIViewController {
     var isFour: Bool = false
     
     
+    var selected: Int = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupStyle()

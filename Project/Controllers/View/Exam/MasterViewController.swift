@@ -151,7 +151,10 @@ class MasterViewController: UIViewController {
         btnChange()
         clearSelected()
     }
+    
     @IBAction func Next(_ sender: Any) {
+        getAnswer()
+        print(mAnswerAll)
         if currentExam == (self.mExamAll.count)-1 {
             //finish button
             let storyboard = UIStoryboard(name: "Result", bundle: nil)
@@ -170,6 +173,22 @@ class MasterViewController: UIViewController {
         updateView()
         btnChange()
         clearSelected()
+    }
+    
+    func getAnswer() {
+        switch index {
+        case 1:
+            mAnswerAll.insert(examtextViewController.selected, at: currentExam)
+        case 2:
+            mAnswerAll.insert(examtextViewController.selected, at: currentExam)
+        case 3:
+            mAnswerAll.insert(examtextViewController.selected, at: currentExam)
+        case 4:
+            mAnswerAll.insert(examtextViewController.selected, at: currentExam)
+        default:
+            //SomeThing
+            break
+        }
     }
     
     @objc func feedData(){
