@@ -13,7 +13,7 @@
         <!--Master View Controller-->
         <scene sceneID="A8x-bP-udz">
             <objects>
-                <viewController id="S04-Uk-48W" customClass="MasterViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Exam" id="S04-Uk-48W" customClass="MasterViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r1W-gX-NQs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

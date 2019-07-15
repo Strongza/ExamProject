@@ -137,7 +137,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="VZg-tU-iqD" kind="show" id="9Xu-z7-Ph5"/>
+                                    <action selector="startExam" destination="QFR-Vj-9Ad" eventType="touchUpInside" id="kXn-FJ-Icn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -178,16 +178,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YzT-Ny-MdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1634.4000000000001" y="158.86699507389164"/>
-        </scene>
-        <!--Exam-->
-        <scene sceneID="YbI-6r-qku">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Exam" id="VZg-tU-iqD" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Qzh-cp-OiA"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tlD-wQ-ZGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2469" y="273"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Z5M-s2-D79">

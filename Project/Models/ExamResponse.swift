@@ -45,9 +45,11 @@
 //
 //// MARK: - QuestionQuestion
 //struct QuestionQuestion: Codable {
-//    let questionText: String
+
+//    let questionText: String?
 //    let questionPic: String?
-//    let questionType: String
+//    let questionType: String?
+
 //
 //    enum CodingKeys: String, CodingKey {
 //        case questionText = "question_text"
@@ -58,5 +60,7 @@
 //
 //// MARK: - Status
 //struct ExamStatus: Codable {
-//    let code, message: String
+
+//    let code, message: String?
+
 //}

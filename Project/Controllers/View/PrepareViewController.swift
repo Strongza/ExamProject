@@ -22,4 +22,12 @@ class PrepareViewController: UIViewController {
     @IBAction func returnToList(){
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func startExam() {
+        let storyboard = UIStoryboard(name: "Exam", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Exam") as! MasterViewController
+        print("💦\(id)")
+        vc.id = self.id
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
