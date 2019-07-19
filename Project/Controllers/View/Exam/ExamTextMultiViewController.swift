@@ -26,6 +26,7 @@ class ExamTextMultiViewController: UIViewController {
     
     var question: String! = ""
     var choice: [Choice] = []
+   
     
     var str: String!
     var showMore: Bool = false
@@ -35,7 +36,7 @@ class ExamTextMultiViewController: UIViewController {
     var isFour: Bool = false
     
     
-    var selected: Int = 0
+    var selected: [Int] = []
     
     
     override func viewDidLoad() {
@@ -137,6 +138,29 @@ class ExamTextMultiViewController: UIViewController {
             mAns3.backgroundColor = #colorLiteral(red: 0.2549019608, green: 0.2549019608, blue: 0.2549019608, alpha: 0.4295269692)
             mAns4.backgroundColor = #colorLiteral(red: 0.2549019608, green: 0.2549019608, blue: 0.2549019608, alpha: 0.4295269692)
         }
+    }
+    
+    func sendMultiAns(){
+        selected = []
+        if isOne{
+            selected.append(1)
+        }
+        if isTwo{
+            selected.append(2)
+        }
+        if isThree{
+            selected.append(3)
+        }
+        if isFour{
+            selected.append(4)
+        }
+        if isOne != true && isTwo != true && isThree != true && isFour != true{
+            selected.append(0)
+        }
+        isOne = false
+        isTwo = false
+        isThree = false
+        isFour = false
     }
     
     func setLabel() {

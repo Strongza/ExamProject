@@ -28,6 +28,8 @@ class PrepareViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "Exam") as! MasterViewController
         print("💦\(id)")
         vc.id = self.id
+        vc.examCount = self.examCount
+        vc.total = self.totalScore
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

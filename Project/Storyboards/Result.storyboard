@@ -118,6 +118,10 @@
                         <viewLayoutGuide key="safeArea" id="hdr-mN-cNE"/>
                     </view>
                     <navigationItem key="navigationItem" id="gvW-6T-6b7"/>
+                    <connections>
+                        <outlet property="score_total" destination="i7p-zL-Ayy" id="Z1Z-2L-HjV"/>
+                        <outlet property="score_user" destination="lgZ-qm-T12" id="dUU-9w-xbc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kmm-SP-cVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

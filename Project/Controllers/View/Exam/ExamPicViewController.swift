@@ -27,6 +27,8 @@ class ExamPicViewController: UIViewController {
     
     var question: String! = ""
     var choice: [Choice] = []
+    var selected: Int = 0
+    
     
     var str: String!
     var showMore: Bool = false
@@ -90,6 +92,7 @@ class ExamPicViewController: UIViewController {
     }
     
     func selected(Ans: String){
+        selected = Int(Ans)!
         print(Ans)
         switch Int(Ans) {
         case 1:
