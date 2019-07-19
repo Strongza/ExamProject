@@ -1,9 +1,17 @@
 import UIKit
 
 class ResultViewController: UIViewController {
+    
+    @IBOutlet weak var score_user: UILabel!
+    @IBOutlet weak var score_total: UILabel!
+    
+    var sum = 0
+    var total = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        score_user.text = String(sum)
+        score_total.text = String(total)
     }
     
     override func viewWillAppear(_ animated: Bool) {

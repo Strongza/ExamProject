@@ -44,7 +44,7 @@
                                             <color key="titleColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
                                         </state>
                                         <connections>
-                                            <action selector="Previous:" destination="S04-Uk-48W" eventType="touchUpInside" id="cew-oR-IAz"/>
+                                            <action selector="Previous:" destination="S04-Uk-48W" eventType="touchUpInside" id="iOm-Dw-urX"/>
                                         </connections>
                                     </button>
                                 </subviews>

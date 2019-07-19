@@ -17,8 +17,13 @@ class MasterViewController: UIViewController {
     var id: Int = 1
     var index: Int = 1
     var mExamAll : [QuestionElement] = []
-    var mAnswerAll : [Int] = []
     var currentExam : Int = 0
+    var examCount: Int = 0
+    var mAnswerAll: [[Int]] = []
+    var sum: Int = 0
+    var total : Int = 0
+    
+    
     
     lazy var examtextViewController: ExamTextViewController = {
         let storyboard = UIStoryboard(name: "Exam", bundle: Bundle.main)
@@ -64,6 +69,9 @@ class MasterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+  //      mAnswerAll = Array(repeating: Array(),count: self.examCount)
+        mAnswerAll = Array(repeating: Array(),count: self.examCount)
+ //       print("💓💓💓💓💓💓\(mAnswerAll.count)💓💓💓💓💓💓")
         self.feedData()
         setupView()
     }
@@ -73,7 +81,8 @@ class MasterViewController: UIViewController {
     }
     
     private func updateView(){
-        print("🐡🐡🐡🐡 \(self.mExamAll[self.currentExam].choices)")
+        print("🧲🧲🧲\(currentExam)🧲🧲🧲")
+//        print("🐡🐡🐡🐡 \(self.mExamAll[self.currentExam].choices)")
 //        var mQuestionText: String = "Test"
 //        var mChoice: [Choice] = []
         var mQuestionText: String = self.mExamAll[self.currentExam].question.questionText
@@ -87,24 +96,53 @@ class MasterViewController: UIViewController {
             
             examtextViewController.question = mQuestionText
             examtextViewController.choice = mChoice
+            if mAnswerAll[currentExam].count != 0{
+                let ans : String = String(mAnswerAll[currentExam][0])
+                examtextViewController.selected(Ans: ans)
+            }
+            else{
+                examtextViewController.selected = 0
+                clearSelected()
+            }
             examtextViewController.loaddata()
+            
         case 2:
             examtextViewController.view.isHidden = true
             examtextmultiViewController.view.isHidden = false
             exampicViewController.view.isHidden = true
             exampicmulViewController.view.isHidden = true
-            
             examtextmultiViewController.question = mQuestionText
             examtextmultiViewController.choice = mChoice
+            if mAnswerAll[currentExam].count != 0{
+                for i in 0...mAnswerAll[currentExam].count-1{
+                    let ans : String = String(mAnswerAll[currentExam][i])
+                    examtextmultiViewController.selected(Ans: ans)
+                }
+            }
+            else{
+                examtextmultiViewController.isOne = false
+                examtextmultiViewController.isTwo = false
+                examtextmultiViewController.isThree = false
+                examtextmultiViewController.isFour = false
+                examtextmultiViewController.selected = []
+                clearSelected()
+            }
             examtextmultiViewController.loaddata()
         case 3:
             examtextViewController.view.isHidden = true
             examtextmultiViewController.view.isHidden = true
             exampicViewController.view.isHidden = false
             exampicmulViewController.view.isHidden = true
-            
             exampicViewController.question = mQuestionText
             exampicViewController.choice = mChoice
+            if mAnswerAll[currentExam].count != 0{
+                let ans : String = String(mAnswerAll[currentExam][0])
+                exampicViewController.selected(Ans: ans)
+            }
+            else{
+                exampicViewController.selected = 0
+                clearSelected()
+            }
             exampicViewController.loaddata()
         case 4:
             examtextViewController.view.isHidden = true
@@ -114,6 +152,21 @@ class MasterViewController: UIViewController {
             
             exampicmulViewController.question = mQuestionText
             exampicmulViewController.choice = mChoice
+            if mAnswerAll[currentExam].count != 0{
+                for i in 0...mAnswerAll[currentExam].count-1{
+                    let ans : String = String(mAnswerAll[currentExam][i])
+                    exampicmulViewController.selected(Ans: ans)
+                }
+            }
+            else{
+                exampicmulViewController.isOne = false
+                exampicmulViewController.isTwo = false
+                exampicmulViewController.isThree = false
+                exampicmulViewController.isFour = false
+                exampicmulViewController.selected = []
+                clearSelected()
+            }
+            
             exampicmulViewController.loaddata()
         default:
             examtextViewController.view.isHidden = true
@@ -135,6 +188,8 @@ class MasterViewController: UIViewController {
     
     
     @IBAction func Previous(_ sender: Any) {
+        getAnswer()
+        print("🦄🦄\(mAnswerAll)🦄🦄")
 //        index -= 1
         if self.currentExam == 0 {
             //disable back button
@@ -148,44 +203,87 @@ class MasterViewController: UIViewController {
 //        print("🐞 \(examChoiceType)")
 //        print("🐡 \(currentExam)")
 //        print(index)
+//        clearSelected()
         updateView()
         btnChange()
-        clearSelected()
+        
     }
     
     @IBAction func Next(_ sender: Any) {
         getAnswer()
-        print(mAnswerAll)
+        print("🦄🦄\(mAnswerAll)🦄🦄")
         if currentExam == (self.mExamAll.count)-1 {
+            var sum_score: Int = 0
+            var sum_userScore: Int = 0
             //finish button
             let storyboard = UIStoryboard(name: "Result", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "Result") as! ResultViewController
-            self.navigationController?.pushViewController(vc, animated: true)
+            if mAnswerAll.contains([0]){
+                print("🎁🎁🎁🎁🎁🎁🎁")
+                let alertVC = UIAlertController(title: "Warning!", message: "Please complete all questions", preferredStyle: .alert)
+                alertVC.addAction(UIAlertAction(title: "cancel", style: .cancel, handler:  { (alert) in
+                    
+                }))
+                self.present(alertVC, animated: true, completion: nil)
+            }
+            else{
+                for i in 0...mAnswerAll.count-1{
+                    if self.mExamAll[i].question.questionType == "single"{
+                        sum += self.mExamAll[i].choices[mAnswerAll[i][0]-1].choiceScore
+                    }
+                    else{
+                        
+                        for j in 0...self.mExamAll[i].choices.count-1{
+                            sum_score += self.mExamAll[i].choices[j].choiceScore
+                        }
+                        for k in 0...self.mAnswerAll[i].count-1{
+                            sum_userScore += self.mExamAll[i].choices[mAnswerAll[i][k]-1].choiceScore
+                        }
+                        if sum_score == sum_userScore{
+                            sum += 1
+                        }
+                    }
+                    sum_score = 0
+                    sum_userScore = 0
+                }
+                vc.sum = self.sum
+                vc.total = self.total
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            
+            
         } else {
             currentExam += 1
+            
         }
+        
         let examType = self.mExamAll[self.currentExam].question.questionType
         let examChoiceType = self.mExamAll[self.currentExam].choices[0].choicePic
         self.selectExamView(examType: examType, examChoiceType: examChoiceType)
-//        print("🐳 \(examType)")
-//        print("🐞 \(examChoiceType)")
-//        print("🐡 \(currentExam)")
-//        print(index)
+        
         updateView()
         btnChange()
-        clearSelected()
+        
     }
     
     func getAnswer() {
         switch index {
         case 1:
-            mAnswerAll.insert(examtextViewController.selected, at: currentExam)
+            //mAnswerAll.insert(examtextViewController.selected, at: currentExam)
+            let ansint: [Int] = [examtextViewController.selected]
+            mAnswerAll[currentExam] = ansint
         case 2:
-            mAnswerAll.insert(examtextViewController.selected, at: currentExam)
+            examtextmultiViewController.sendMultiAns()
+            //mAnswerAll.insert(examtextmultiViewController.selected, at: currentExam)
+            mAnswerAll[currentExam] = examtextmultiViewController.selected
         case 3:
-            mAnswerAll.insert(examtextViewController.selected, at: currentExam)
+//            mAnswerAll.insert(exampicViewController.selected, at: currentExam)
+            let ansint: [Int] = [exampicViewController.selected]
+            mAnswerAll[currentExam] = ansint
         case 4:
-            mAnswerAll.insert(examtextViewController.selected, at: currentExam)
+            exampicmulViewController.sendMultiAns()
+            mAnswerAll[currentExam] = exampicmulViewController.selected
+//            mAnswerAll.insert(exampicmulViewController.selected, at: currentExam)
         default:
             //SomeThing
             break
@@ -193,9 +291,9 @@ class MasterViewController: UIViewController {
     }
     
     @objc func feedData(){
-//        AF.request("http://localhost:9000/api/exam/1", method: .get).responseJSON { (response) in
+        AF.request("http://localhost:9000/api/exam/1", method: .get).responseJSON { (response) in
 //        print("🍉\(id)")
-        AF.request("http://192.168.109.95:8085/api/exam/\(id)", method: .get).responseJSON { (response) in
+//        AF.request("http://192.168.110.136:9999/exam/\(id)", method: .get).responseJSON { (response) in
     
             switch response.result{
             case .success(let value):
@@ -234,6 +332,7 @@ class MasterViewController: UIViewController {
         default:
             mPreviousButton.isHidden = false
             mNextButton.isHidden = false
+            mNextButton.setTitle("Next", for: .normal)
         }
     }
     

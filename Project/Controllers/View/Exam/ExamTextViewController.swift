@@ -26,10 +26,12 @@ class ExamTextViewController: UIViewController {
     
     var question: String! = ""
     var choice: [Choice] = []
+    var curAns: [Int] = []
     
     var str: String! = ""
     var showMore: Bool = false
     var selected: Int = 0
+    var Ans:String! = ""
     override func viewDidLoad() {
         super.viewDidLoad()
    
