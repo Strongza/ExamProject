@@ -195,7 +195,7 @@ class MasterViewController: UIViewController {
     @objc func feedData(){
 //        AF.request("http://localhost:9000/api/exam/1", method: .get).responseJSON { (response) in
 //        print("🍉\(id)")
-        AF.request("http://192.168.109.95:8085/api/exam/\(id)", method: .get).responseJSON { (response) in
+        AF.request("http://192.168.109.2:8085/api/exam/\(id)", method: .get).responseJSON { (response) in
     
             switch response.result{
             case .success(let value):
