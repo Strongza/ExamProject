@@ -94,7 +94,7 @@ class MasterViewController: UIViewController {
             exampicViewController.view.isHidden = true
             exampicmulViewController.view.isHidden = true
             
-            examtextViewController.question = mQuestionText
+            examtextViewController.question = "\(mQuestionText) (choose only 1 choice.)"
             examtextViewController.choice = mChoice
             if mAnswerAll[currentExam].count != 0{
                 let ans : String = String(mAnswerAll[currentExam][0])
@@ -111,7 +111,7 @@ class MasterViewController: UIViewController {
             examtextmultiViewController.view.isHidden = false
             exampicViewController.view.isHidden = true
             exampicmulViewController.view.isHidden = true
-            examtextmultiViewController.question = mQuestionText
+            examtextmultiViewController.question = "\(mQuestionText) (choose multiple choices.)"
             examtextmultiViewController.choice = mChoice
             if mAnswerAll[currentExam].count != 0{
                 for i in 0...mAnswerAll[currentExam].count-1{
@@ -133,7 +133,7 @@ class MasterViewController: UIViewController {
             examtextmultiViewController.view.isHidden = true
             exampicViewController.view.isHidden = false
             exampicmulViewController.view.isHidden = true
-            exampicViewController.question = mQuestionText
+            exampicViewController.question = "\(mQuestionText) (choose only 1 choice.)"
             exampicViewController.choice = mChoice
             if mAnswerAll[currentExam].count != 0{
                 let ans : String = String(mAnswerAll[currentExam][0])
@@ -150,7 +150,7 @@ class MasterViewController: UIViewController {
             exampicViewController.view.isHidden = true
             exampicmulViewController.view.isHidden = false
             
-            exampicmulViewController.question = mQuestionText
+            exampicmulViewController.question = "\(mQuestionText) (choose multiple choices.)"
             exampicmulViewController.choice = mChoice
             if mAnswerAll[currentExam].count != 0{
                 for i in 0...mAnswerAll[currentExam].count-1{
