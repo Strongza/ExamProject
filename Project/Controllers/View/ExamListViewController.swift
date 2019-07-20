@@ -72,10 +72,6 @@ class ExamListViewController: UIViewController {
                 self.present(alertVC, animated: true, completion: nil)
             }
             
-            // 2 second
-//            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-////                self.mRefresh.endRefreshing()
-//            }
         }
     }
 }
@@ -123,7 +119,6 @@ extension ExamListViewController: UITableViewDelegate, UITableViewDataSource {
             self.examCount = item.countQuestion
         }
         
-//        print(self.ID)
         let storyboard = UIStoryboard(name: "Preparetoexam", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "PrepareExam") as! PrepareViewController
         vc.id = self.ID
@@ -135,10 +130,6 @@ extension ExamListViewController: UITableViewDelegate, UITableViewDataSource {
         
         
         self.navigationController?.pushViewController(vc, animated: true)
-        
-//        let storyboard = AppStoryboard.Preparetoexam.instance.instantiateViewController(withIdentifier: "PrepareExam")
-//        storyboard.id = self.ID
-//        navigationController?.pushViewController(storyboard, animated: true)
         
     }
     

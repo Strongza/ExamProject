@@ -1,11 +1,3 @@
-//
-//  MasterViewController.swift
-//  Project
-//
-//  Created by papob boonpat on 9/7/2562 BE.
-//  Copyright © 2562 papob boonpat. All rights reserved.
-//
-
 import UIKit
 import Alamofire
 
